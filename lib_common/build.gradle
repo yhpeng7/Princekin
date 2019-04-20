@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //禁用矢量绘图在构建时生成PNG图像（节省支持库的空间，真正受益于新的库）
+        vectorDrawables.useSupportLibrary = true
+
+        multiDexEnabled true
+
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+
+        dexOptions {
+            //可以极大的加快重新编译的速度，同样也能提高Instant Run的性能。
+            dexInProcess true
+            //声明是否对依赖的库进行dex 预处理来使你的增量构建更快速，因为这个特性可能会使你的clean 构建变慢，因此在你的持续集成服务器上你可能想关闭这个特性。
+            preDexLibraries true
+            javaMaxHeapSize "4g"
+            // incremental true
+        }
+
+        compileOptions {
+            targetCompatibility JavaVersion.VERSION_1_8
+            sourceCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+
+    dependencies {
+        api fileTree(include: ['*.jar'], dir: 'libs')
+        api rootProject.ext.testLibs
+        api rootProject.ext.supportLibs
+        api rootProject.ext.networkLibs
+        api rootProject.ext.rxJavaLibs
+        api rootProject.ext.commonLibs
+    }
+}
