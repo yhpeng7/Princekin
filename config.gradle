@@ -1,7 +1,6 @@
 ext {
-    isApplication = false
+    isApplication = true
     android = [
-            applicationId : "com.yhklsdf",
             compileSdkVersion: 28,
             buildToolsVersion: "28.0.3",
             minSdkVersion    : 18,

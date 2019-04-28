@@ -6,8 +6,10 @@ import android.support.design.widget.NavigationView
 import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.ActionBarDrawerToggle
 import com.yhklsdf.lib_common.base.BaseActivity
+import com.yhklsdf.lib_common.utils.FileUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
+import org.jetbrains.anko.toast
 
 class MainActivity : BaseActivity() {
 
@@ -45,6 +47,7 @@ class MainActivity : BaseActivity() {
             mIndex = savedInstanceState?.getInt(BOTTOM_INDEX)
         }
         super.onCreate(savedInstanceState)
+        toast(FileUtils.str())
     }
 
     override fun onSaveInstanceState(outState: Bundle?) {
