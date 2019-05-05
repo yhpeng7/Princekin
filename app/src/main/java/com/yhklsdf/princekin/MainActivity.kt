@@ -12,7 +12,6 @@ import com.yhklsdf.module_home.HomeFragment
 import com.yhklsdf.module_mine.MineFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.toolbar.*
-import org.jetbrains.anko.toast
 
 class MainActivity : BaseActivity() {
 
@@ -20,6 +19,8 @@ class MainActivity : BaseActivity() {
 
     private val FRAGMENT_HOME = 0x01
     private val FRAGMENT_COMMUNITY = 0x02
+    private val FRAGMENT_COURSE = 0x03
+    private val FRAGMENT_MINE = 0x04
 
     private var mIndex = FRAGMENT_HOME
 
@@ -41,7 +42,10 @@ class MainActivity : BaseActivity() {
 
         initDrawerLayout()
 
-        bottom_navigation.labelVisibilityMode = 1
+        bottom_navigation.run {
+            labelVisibilityMode = 1
+            setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+        }
 
         nav_view.run {
             setNavigationItemSelectedListener(onDrawerNavigationItemSelectedListener)
@@ -73,7 +77,7 @@ class MainActivity : BaseActivity() {
             FRAGMENT_HOME ->{
                 if (mHomeFragment == null) {
                     mHomeFragment = HomeFragment.getInstance()
-                    transaction.add(R.id.container, mHomeFragment!!, "home")
+                    transaction.add(R.id.main_container, mHomeFragment!!, "home")
                 } else {
                     transaction.show(mHomeFragment!!)
                 }
@@ -81,9 +85,25 @@ class MainActivity : BaseActivity() {
             FRAGMENT_COMMUNITY ->{
                 if (mCommunityFragment == null) {
                     mCommunityFragment = CommunityFragment.getInstance()
-                    transaction.add(R.id.container, mCommunityFragment!!, "community")
+                    transaction.add(R.id.main_container, mCommunityFragment!!, "community")
                 } else {
                     transaction.show(mCommunityFragment!!)
+                }
+            }
+            FRAGMENT_COURSE ->{
+                if (mCourseFragment == null) {
+                    mCourseFragment = CourseFragment.getInstance()
+                    transaction.add(R.id.main_container, mCourseFragment!!, "course")
+                } else {
+                    transaction.show(mCourseFragment!!)
+                }
+            }
+            FRAGMENT_MINE ->{
+                if (mMineFragment == null) {
+                    mMineFragment = MineFragment.getInstance()
+                    transaction.add(R.id.main_container, mMineFragment!!, "mine")
+                } else {
+                    transaction.show(mMineFragment!!)
                 }
             }
         }
@@ -106,6 +126,14 @@ class MainActivity : BaseActivity() {
                     }
                     R.id.action_community ->{
                         showFragment(FRAGMENT_COMMUNITY)
+                        true
+                    }
+                    R.id.action_course->{
+                        showFragment(FRAGMENT_COURSE)
+                        true
+                    }
+                    R.id.action_mine->{
+                        showFragment(FRAGMENT_MINE)
                         true
                     }
                     else -> false
@@ -132,5 +160,13 @@ class MainActivity : BaseActivity() {
             addDrawerListener(toggle)
             toggle.syncState()
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mHomeFragment = null
+        mCommunityFragment = null
+        mCourseFragment = null
+        mMineFragment = null
     }
 }

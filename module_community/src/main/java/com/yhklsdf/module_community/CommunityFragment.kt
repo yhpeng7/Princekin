@@ -4,7 +4,7 @@ import android.view.View
 import com.yhklsdf.lib_common.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_community.*
 
-public class CommunityFragment : BaseFragment(){
+class CommunityFragment : BaseFragment(){
     companion object {
         fun getInstance(): CommunityFragment = CommunityFragment()
     }
