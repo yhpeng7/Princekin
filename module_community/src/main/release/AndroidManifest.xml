@@ -1,2 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yhklsdf.module_community"/>
+    package="com.yhklsdf.module_community">
+    <application android:theme="@style/AppTheme">
+        <activity android:name=".CommunityActivity"/>
+    </application>
+</manifest>

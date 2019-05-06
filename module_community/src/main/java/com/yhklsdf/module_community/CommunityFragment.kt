@@ -1,9 +1,12 @@
 package com.yhklsdf.module_community
 
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Route
+import com.alibaba.android.arouter.launcher.ARouter
 import com.yhklsdf.lib_common.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_community.*
 
+@Route(path = "/community/fragment")
 class CommunityFragment : BaseFragment(){
     companion object {
         fun getInstance(): CommunityFragment = CommunityFragment()
@@ -17,6 +20,10 @@ class CommunityFragment : BaseFragment(){
     }
 
     override fun initView(view: View) {
-        tv_home_test.text = "Community"
+        tv_community_test.setOnClickListener {
+            ARouter.getInstance()
+                    .build("/course/main")
+                    .navigation()
+        }
     }
 }

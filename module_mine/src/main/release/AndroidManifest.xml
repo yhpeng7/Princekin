@@ -1,2 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yhklsdf.module_mine"/>
+    package="com.yhklsdf.module_mine">
+    <application android:theme="@style/AppTheme">
+        <activity android:name=".MineActivity"/>
+    </application>
+</manifest>

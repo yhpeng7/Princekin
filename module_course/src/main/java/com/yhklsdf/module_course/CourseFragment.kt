@@ -4,7 +4,7 @@ import android.view.View
 import com.yhklsdf.lib_common.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_course.*
 
-public class CourseFragment : BaseFragment(){
+class CourseFragment : BaseFragment(){
     companion object {
         fun getInstance(): CourseFragment = CourseFragment()
     }
@@ -17,6 +17,6 @@ public class CourseFragment : BaseFragment(){
     }
 
     override fun initView(view: View) {
-        tv_home_test.text = "Course"
+        tv_course_test.text = "Course"
     }
 }

@@ -1,17 +1,16 @@
 package com.yhklsdf.princekin
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
-import android.support.design.widget.NavigationView
 import android.support.v4.app.FragmentTransaction
-import android.support.v7.app.ActionBarDrawerToggle
+import com.alibaba.android.arouter.launcher.ARouter
 import com.yhklsdf.lib_common.base.BaseActivity
 import com.yhklsdf.module_community.CommunityFragment
 import com.yhklsdf.module_course.CourseFragment
 import com.yhklsdf.module_home.HomeFragment
 import com.yhklsdf.module_mine.MineFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.toolbar.*
 
 class MainActivity : BaseActivity() {
 
@@ -24,10 +23,10 @@ class MainActivity : BaseActivity() {
 
     private var mIndex = FRAGMENT_HOME
 
-    private var mHomeFragment : HomeFragment? = null
-    private var mCommunityFragment : CommunityFragment? = null
-    private var mCourseFragment : CourseFragment? = null
-    private var mMineFragment : MineFragment? = null
+    private var mHomeFragment: HomeFragment? = null
+    private var mCommunityFragment: CommunityFragment? = null
+    private var mCourseFragment: CourseFragment? = null
+    private var mMineFragment: MineFragment? = null
 
     override fun attachLayoutRes() = R.layout.activity_main
 
@@ -35,20 +34,9 @@ class MainActivity : BaseActivity() {
     }
 
     override fun initView() {
-        toolbar.run {
-            title = getString(R.string.app_name)
-            setSupportActionBar(this)
-        }
-
-        initDrawerLayout()
-
         bottom_navigation.run {
             labelVisibilityMode = 1
             setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
-        }
-
-        nav_view.run {
-            setNavigationItemSelectedListener(onDrawerNavigationItemSelectedListener)
         }
 
         showFragment(mIndex)
@@ -57,6 +45,7 @@ class MainActivity : BaseActivity() {
     override fun start() {
     }
 
+    @SuppressLint("PrivateResource")
     override fun onCreate(savedInstanceState: Bundle?) {
         if (savedInstanceState != null) {
             mIndex = savedInstanceState?.getInt(BOTTOM_INDEX)
@@ -69,12 +58,13 @@ class MainActivity : BaseActivity() {
         outState?.putInt(BOTTOM_INDEX, mIndex)
     }
 
+    @Suppress("CAST_NEVER_SUCCEEDS")
     private fun showFragment(index: Int) {
         val transaction = supportFragmentManager.beginTransaction()
         hideFragments(transaction)
         mIndex = index
-        when(index){
-            FRAGMENT_HOME ->{
+        when (index) {
+            FRAGMENT_HOME -> {
                 if (mHomeFragment == null) {
                     mHomeFragment = HomeFragment.getInstance()
                     transaction.add(R.id.main_container, mHomeFragment!!, "home")
@@ -82,15 +72,15 @@ class MainActivity : BaseActivity() {
                     transaction.show(mHomeFragment!!)
                 }
             }
-            FRAGMENT_COMMUNITY ->{
+            FRAGMENT_COMMUNITY -> {
                 if (mCommunityFragment == null) {
-                    mCommunityFragment = CommunityFragment.getInstance()
+                    mCommunityFragment = ARouter.getInstance().build("/community/fragment").navigation() as CommunityFragment
                     transaction.add(R.id.main_container, mCommunityFragment!!, "community")
                 } else {
                     transaction.show(mCommunityFragment!!)
                 }
             }
-            FRAGMENT_COURSE ->{
+            FRAGMENT_COURSE -> {
                 if (mCourseFragment == null) {
                     mCourseFragment = CourseFragment.getInstance()
                     transaction.add(R.id.main_container, mCourseFragment!!, "course")
@@ -98,7 +88,7 @@ class MainActivity : BaseActivity() {
                     transaction.show(mCourseFragment!!)
                 }
             }
-            FRAGMENT_MINE ->{
+            FRAGMENT_MINE -> {
                 if (mMineFragment == null) {
                     mMineFragment = MineFragment.getInstance()
                     transaction.add(R.id.main_container, mMineFragment!!, "mine")
@@ -120,47 +110,25 @@ class MainActivity : BaseActivity() {
     private val onNavigationItemSelectedListener =
             BottomNavigationView.OnNavigationItemSelectedListener { item ->
                 return@OnNavigationItemSelectedListener when (item.itemId) {
-                    R.id.action_home ->{
+                    R.id.action_home -> {
                         showFragment(FRAGMENT_HOME)
                         true
                     }
-                    R.id.action_community ->{
+                    R.id.action_community -> {
                         showFragment(FRAGMENT_COMMUNITY)
                         true
                     }
-                    R.id.action_course->{
+                    R.id.action_course -> {
                         showFragment(FRAGMENT_COURSE)
                         true
                     }
-                    R.id.action_mine->{
+                    R.id.action_mine -> {
                         showFragment(FRAGMENT_MINE)
                         true
                     }
                     else -> false
                 }
             }
-
-    private val onDrawerNavigationItemSelectedListener =
-            NavigationView.OnNavigationItemSelectedListener { item ->
-                when(item.itemId){
-                    R.id.nav_info -> {
-                    }
-                }
-                true
-            }
-
-    private fun initDrawerLayout() {
-        main_drawer_layout.run {
-            var toggle = ActionBarDrawerToggle(
-                    this@MainActivity,
-                    this,
-                    toolbar
-                    , R.string.navigation_drawer_open,
-                    R.string.navigation_drawer_close)
-            addDrawerListener(toggle)
-            toggle.syncState()
-        }
-    }
 
     override fun onDestroy() {
         super.onDestroy()

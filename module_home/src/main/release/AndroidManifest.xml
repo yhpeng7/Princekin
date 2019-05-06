@@ -1,2 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yhklsdf.module_home"/>
+    package="com.yhklsdf.module_home">
+    <application android:theme="@style/AppTheme">
+        <activity android:name=".HomeActivity"/>
+    </application>
+</manifest>

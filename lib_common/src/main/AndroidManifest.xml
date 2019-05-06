@@ -23,7 +23,7 @@
             android:value="360" />
         <meta-data
             android:name="design_height_in_dp"
-            android:value="640" />
+            android:value="830" />
 
         <receiver android:name=".receiver.NetworkChangeReceiver" />
     </application>
