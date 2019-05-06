@@ -17,6 +17,5 @@ class CourseFragment : BaseFragment(){
     }
 
     override fun initView(view: View) {
-        tv_course_test.text = "Course"
     }
 }
