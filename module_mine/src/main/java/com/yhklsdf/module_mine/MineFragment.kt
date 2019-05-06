@@ -17,6 +17,5 @@ public class MineFragment : BaseFragment(){
     }
 
     override fun initView(view: View) {
-        tv_mine_test.text = "Mine"
     }
 }
