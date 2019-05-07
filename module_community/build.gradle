@@ -19,7 +19,7 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
-//        resourcePrefix "com_"
+        resourcePrefix "com_"
 
         multiDexEnabled true
         kapt {
@@ -60,6 +60,8 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.github.hackware1993:MagicIndicator:1.6.0'
     kapt rootProject.ext.annotationLibs
     api project(':lib_common')
 }

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/com_cimgv_avatar"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textColor="@color/com_color_title"
+        android:id="@+id/com_txtv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/com_cimgv_avatar"
+        app:layout_constraintStart_toEndOf="@+id/com_cimgv_avatar"
+        app:layout_constraintTop_toTopOf="@+id/com_cimgv_avatar" />
+
+    <TextView
+        android:id="@+id/com_txtv_college"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:text="TextView"
+        android:textColor="@color/com_color_text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/com_txtv_name"
+        app:layout_constraintStart_toEndOf="@+id/com_txtv_name"
+        app:layout_constraintTop_toTopOf="@+id/com_txtv_name" />
+
+    <TextView
+        android:textColor="@color/com_color_title"
+        android:id="@+id/com_txtv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/com_cimgv_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/com_cimgv_avatar" />
+
+    <TextView
+        android:id="@+id/com_txtv_recent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="14dp"
+        android:text="TextView"
+        android:textColor="@color/com_color_recent"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/com_txtv_title"
+        app:layout_constraintTop_toBottomOf="@+id/com_txtv_title" />
+
+    <TextView
+        android:id="@+id/com_txtv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:text="TextView"
+        android:textColor="@color/com_color_recent"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/com_txtv_recent" />
+</android.support.constraint.ConstraintLayout>
