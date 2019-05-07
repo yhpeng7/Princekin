@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.module_login">
+
+    <application
+        android:theme="@style/AppTheme" >
+        <activity android:name=".RegisterActivity"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden"/>
+        <activity android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden"/>
+    </application>
+</manifest>
