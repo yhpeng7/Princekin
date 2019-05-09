@@ -11,7 +11,6 @@ import com.yhklsdf.lib_common.app.BaseApplication;
 
 public class MyTextView extends AppCompatTextView {
 
-
     public MyTextView(Context context) {
         super(context);
         // 设置下载好的字体
