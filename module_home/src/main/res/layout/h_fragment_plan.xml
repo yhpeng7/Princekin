@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner_home"
+            android:layout_width="match_parent"
+            android:layout_height="149dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical">
+
+            <com.yhklsdf.lib_common.ui.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="高薪动态"
+                android:textColor="#2D6FAA"
+                android:textSize="14sp" />
+
+            <ViewFlipper
+                android:id="@+id/h_view_flipper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:inAnimation="@anim/h_anim_vf_in"
+                android:outAnimation="@anim/h_anim_vf_out" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#F1F1F1" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/h_view2"
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="88dp"
+                android:background="@drawable/h_widget_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/h_imageview3"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="159dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/home_logo_3" />
+
+            <com.yhklsdf.lib_common.ui.MyTextView
+                android:id="@+id/h_textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="实验室"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/h_imageview3"
+                app:layout_constraintStart_toStartOf="@+id/h_imageview3"
+                app:layout_constraintTop_toBottomOf="@+id/h_imageview3" />
+
+            <ImageView
+                android:id="@+id/h_imageview4"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/h_imageview3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/home_logo_2" />
+
+            <com.yhklsdf.lib_common.ui.MyTextView
+                android:id="@+id/h_textview3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="企业招聘"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/h_imageview4"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/h_imageview4"
+                app:layout_constraintTop_toBottomOf="@+id/h_imageview4" />
+
+            <ImageView
+                android:id="@+id/h_imageview5"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/h_imageview3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/home_logo_4" />
+
+            <com.yhklsdf.lib_common.ui.MyTextView
+                android:id="@+id/h_textview4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="7dp"
+                android:text="我要考研"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/h_imageview5"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/h_imageview5"
+                app:layout_constraintTop_toBottomOf="@+id/h_imageview5" />
+
+            <ImageView
+                android:id="@+id/h_imageview6"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/h_imageview4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/home_logo_1" />
+
+            <com.yhklsdf.lib_common.ui.MyTextView
+                android:id="@+id/h_textview5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="职业规划"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/h_imageview6"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/h_imageview6"
+                app:layout_constraintTop_toBottomOf="@+id/h_imageview6" />
+
+            <ImageView
+                android:id="@+id/h_imageview7"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toEndOf="@+id/h_imageview5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/home_logo_5" />
+
+            <com.yhklsdf.lib_common.ui.MyTextView
+                android:id="@+id/h_textview6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="创新创业"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/h_imageview7"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/h_imageview7"
+                app:layout_constraintTop_toBottomOf="@+id/h_imageview7" />
+
+            <View
+                android:id="@+id/h_view"
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="88dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.yhklsdf.lib_common.ui.MyTextView
+                android:id="@+id/h_textview7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="赛事活动"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/h_view"
+                app:layout_constraintStart_toEndOf="@+id/h_view"
+                app:layout_constraintTop_toTopOf="@+id/h_view" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/h_rv_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/h_textview7" />
+
+            <View
+                android:id="@+id/h_view3"
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="13dp"
+                android:background="@drawable/h_widget_1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/h_rv_1" />
+
+            <com.yhklsdf.lib_common.ui.MyTextView
+                android:id="@+id/h_textview8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="学校要闻"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/h_view3"
+                app:layout_constraintStart_toEndOf="@+id/h_view3"
+                app:layout_constraintTop_toTopOf="@+id/h_view3"
+                app:layout_constraintVertical_bias="0.736" />
+        </android.support.constraint.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/h_news_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
