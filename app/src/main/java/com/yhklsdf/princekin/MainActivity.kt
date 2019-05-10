@@ -2,7 +2,6 @@ package com.yhklsdf.princekin
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.support.design.internal.BottomNavigationItemView
 import android.support.design.internal.BottomNavigationMenuView
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.FragmentTransaction
@@ -11,12 +10,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.alibaba.android.arouter.launcher.ARouter
 import com.yhklsdf.lib_common.base.BaseActivity
-import com.yhklsdf.module_community.CommunityFragment
+import com.yhklsdf.module_community.Fragment.CommunityFragment
 import com.yhklsdf.module_course.CourseFragment
 import com.yhklsdf.module_home.ui.fragment.HomeFragment
 import com.yhklsdf.module_mine.MineFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.margin
 
 class MainActivity : BaseActivity() {
 
@@ -96,7 +94,7 @@ class MainActivity : BaseActivity() {
             }
             FRAGMENT_COURSE -> {
                 if (mCourseFragment == null) {
-                    mCourseFragment = CourseFragment.getInstance()
+                    mCourseFragment = ARouter.getInstance().build("/course/main").navigation() as CourseFragment
                     transaction.add(R.id.main_container, mCourseFragment!!, "course")
                 } else {
                     transaction.show(mCourseFragment!!)
@@ -104,7 +102,7 @@ class MainActivity : BaseActivity() {
             }
             FRAGMENT_MINE -> {
                 if (mMineFragment == null) {
-                    mMineFragment = MineFragment.getInstance()
+                    mMineFragment = ARouter.getInstance().build("/mine/main").navigation() as MineFragment
                     transaction.add(R.id.main_container, mMineFragment!!, "mine")
                 } else {
                     transaction.show(mMineFragment!!)
