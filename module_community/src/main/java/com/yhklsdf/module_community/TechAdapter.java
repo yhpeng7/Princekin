@@ -26,7 +26,7 @@ public class TechAdapter extends RecyclerView.Adapter<TechAdapter.DataViewHolder
     @NonNull
     @Override
     public DataViewHolder onCreateViewHolder (@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.com_recycler_item, viewGroup,false);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.com_item_tech_recycler, viewGroup,false);
         DataViewHolder viewHolder = new DataViewHolder(view);
         return viewHolder;
     }
