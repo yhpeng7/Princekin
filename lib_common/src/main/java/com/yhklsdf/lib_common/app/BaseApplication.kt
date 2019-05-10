@@ -2,6 +2,7 @@ package com.yhklsdf.lib_common.app
 
 import android.app.Application
 import android.content.Context
+import android.graphics.Typeface
 import kotlin.properties.Delegates
 
 open class BaseApplication : Application() {
@@ -14,11 +15,18 @@ open class BaseApplication : Application() {
             private set
 
         lateinit var instance : Application
+
+        lateinit var typeface:Typeface
+
+        fun getTypeFace(): Typeface? {
+            return typeface
+        }
     }
 
     override fun onCreate() {
         super.onCreate()
         instance = this
         context = applicationContext
+        typeface = Typeface.createFromAsset(instance.getAssets(), "fonts/HWSC-REGULAR.OTF")
     }
 }

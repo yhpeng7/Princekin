@@ -72,6 +72,8 @@ ext {
             "agentweb"        : 'com.just.agentweb:agentweb:4.0.2',
             "brvh"            : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46',
             "arouter_api"     : "com.alibaba:arouter-api:${dependVersion.arouter_api}",
+            "banner"          : 'com.youth.banner:banner:1.4.10',
+            "textbanner"      : 'com.superluo:textbannerview:1.0.5',
             "circleimageview" : 'de.hdodenhof:circleimageview:3.0.0'
     ]
 

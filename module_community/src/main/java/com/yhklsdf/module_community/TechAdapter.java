@@ -73,12 +73,12 @@ public class TechAdapter extends RecyclerView.Adapter<TechAdapter.DataViewHolder
 
         public DataViewHolder (@NonNull View itemView) {
             super(itemView);
-            com_cimgv_avatar = itemView.findViewById(R.id.com_cimgv_avatar);
-            com_txtv_name = itemView.findViewById(R.id.com_txtv_name);
-            com_txtv_college = itemView.findViewById(R.id.com_txtv_college);
-            com_txtv_title = itemView.findViewById(R.id.com_txtv_title);
-            com_txtv_recent = itemView.findViewById(R.id.com_txtv_recent);
-            com_txtv_time = itemView.findViewById(R.id.com_txtv_time);
+            com_cimgv_avatar = itemView.findViewById(R.id.com_cimgv_tech_avatar);
+            com_txtv_name = itemView.findViewById(R.id.com_txtv_tech_name);
+            com_txtv_college = itemView.findViewById(R.id.com_txtv_tech_college);
+            com_txtv_title = itemView.findViewById(R.id.com_txtv_tech_title);
+            com_txtv_recent = itemView.findViewById(R.id.com_txtv_tech_recent);
+            com_txtv_time = itemView.findViewById(R.id.com_txtv_tech_time);
         }
     }
 }

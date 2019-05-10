@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="com_indicator_main_width">38dp</dimen>
+    <dimen name="com_indicator_main_height">6dp</dimen>
+    <dimen name="com_indicator_life_width">24dp</dimen>
+    <dimen name="com_indicator_life_height">2dp</dimen>
+</resources>

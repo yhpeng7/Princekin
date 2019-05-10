@@ -6,7 +6,14 @@
     <color name="com_color_title">#000000</color>
     <color name="com_color_text">#8a8a8a</color>
     <color name="com_color_tab_indicator">#aa1e5b91</color>
+    <color name="com_color_life_indicator">#000000</color>
     <color name="com_color_tab_divider">#e9e9e9</color>
     <color name="com_color_recent">#afafaf</color>
     <color name="com_color_life_divider">#f1f1f1</color>
+    <color name="com_color_shadow_life">#29663E04</color>
+    <color name="com_color_back_living">#CEF4FF</color>
+    <color name="com_color_back_run">#FFEBCE</color>
+    <color name="com_color_back_rent">#F3DFFA</color>
+    <color name="com_color_back_seconde">#E3FFF4</color>
+    <color name="com_color_back_work">#FFDDF6</color>
 </resources>
