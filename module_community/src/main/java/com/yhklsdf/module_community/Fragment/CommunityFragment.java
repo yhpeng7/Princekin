@@ -1,4 +1,4 @@
-package com.yhklsdf.module_community;
+package com.yhklsdf.module_community.Fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.yhklsdf.module_community.R;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -85,8 +86,8 @@ public class CommunityFragment extends Fragment {
             public IPagerIndicator getIndicator (Context context) {
                 LinePagerIndicator indicator = new LinePagerIndicator(getContext());
                 indicator.setMode(LinePagerIndicator.MODE_EXACTLY);
-                indicator.setLineWidth(getResources().getDimension(R.dimen.com_indicator_width));
-                indicator.setLineHeight(getResources().getDimension(R.dimen.com_indicator_height));
+                indicator.setLineWidth(getResources().getDimension(R.dimen.com_indicator_main_width));
+                indicator.setLineHeight(getResources().getDimension(R.dimen.com_indicator_main_height));
                 indicator.setYOffset(55);
                 indicator.setColors(getResources().getColor(R.color.com_color_tab_indicator));
                 return indicator;
