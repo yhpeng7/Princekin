@@ -13,23 +13,27 @@
         android:id="@+id/h_imageview"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="11dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/home_1" />
 
     <com.yhklsdf.lib_common.ui.MyTextView
         android:id="@+id/h_tv_plan"
         android:layout_width="75dp"
         android:layout_height="32dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="12dp"
         android:layout_marginLeft="102.5dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="星规划"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.yhklsdf.lib_common.ui.MyTextView
         android:id="@+id/h_tv_honor"
@@ -58,11 +62,13 @@
         android:id="@+id/h_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="9dp"
         android:layout_marginStart="13dp"
+        android:layout_marginTop="8dp"
         android:text="西邮"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

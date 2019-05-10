@@ -29,6 +29,7 @@ public class HomeFragment : BaseFragment(){
         h_tv_honor.textColorResource = R.color.black
         vp_home.adapter = VPHomeAdapter(childFragmentManager)
         vp_home.setOnPageChangeListener(pageChangeListener)
+
     }
 
     private val pageChangeListener =  object : ViewPager.OnPageChangeListener{

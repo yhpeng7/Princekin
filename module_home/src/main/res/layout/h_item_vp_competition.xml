@@ -34,7 +34,7 @@
         <com.yhklsdf.lib_common.ui.MyTextView
             android:id="@+id/h_tv_rv1_category"
             android:layout_width="match_parent"
-            android:layout_height="17dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
             android:layout_marginEnd="3dp"
             android:layout_marginBottom="5dp"

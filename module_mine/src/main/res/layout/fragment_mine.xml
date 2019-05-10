@@ -1,13 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_mine_test"
-        android:text="Mine"
-        android:layout_width="wrap_content"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="214dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/mine_header_bg" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b0000000" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="59dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_avatar"
+                android:src="@mipmap/mine_avatar"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="刘小林"
+                android:textColor="#F2F2F2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/user_integral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="积分：1280"
+                android:textColor="#F2F2F2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/user_college"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="电子工程学院"
+                android:textColor="#F2F2F2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:background="@drawable/tv_edit_bg"
+                android:gravity="center"
+                android:text="编辑"
+                android:textColor="#000000"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_honor"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/honor_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_honor"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="荣誉" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_resume"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/resume_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_resume"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="简历" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_experience"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/experience_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_experience"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="经历" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_ranking"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ranking_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_ranking"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:text="排名" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:layout_width="match_parent"
+        android:layout_marginTop="109dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/black" />
-</LinearLayout>
+        android:orientation="vertical">
+        <View
+            android:background="#F4F4F4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="26dp"
+            android:gravity="center_vertical"
+            android:text="我的规划"/>
+        <View
+            android:background="#F4F4F4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="26dp"
+            android:gravity="center_vertical"
+            android:text="我的关注"/>
+        <View
+            android:background="#F4F4F4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="26dp"
+            android:gravity="center_vertical"
+            android:text="我的帖子"/>
+        <View
+            android:background="#F4F4F4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:textSize="16sp"
+            android:layout_marginLeft="26dp"
+            android:gravity="center_vertical"
+            android:text="设置"/>
+        <View
+            android:background="#F4F4F4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
