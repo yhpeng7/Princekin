@@ -1,8 +1,8 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="BaseAppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="android:statusBarColor">#2D6FAA</item>
-        <item name="android:navigationBarColor">#2D6FAA</item>
+    <style name="BaseAppTheme" parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
     </style>
 </resources>

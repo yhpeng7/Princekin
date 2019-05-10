@@ -12,4 +12,5 @@
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
         android:src="@mipmap/ic_splash"/>
+
 </FrameLayout>

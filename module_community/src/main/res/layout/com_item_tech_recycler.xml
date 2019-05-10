@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/com_cimgv_tech_avatar"
+        android:id="@+id/com_cimgv_avatar"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_marginStart="13dp"
@@ -15,45 +15,42 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/com_txtv_tech_name"
+        android:textColor="@color/com_color_title"
+        android:id="@+id/com_txtv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="TextView"
-        android:textColor="@color/com_color_title"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/com_cimgv_tech_avatar"
-        app:layout_constraintStart_toEndOf="@+id/com_cimgv_tech_avatar"
-        app:layout_constraintTop_toTopOf="@+id/com_cimgv_tech_avatar" />
+        app:layout_constraintBottom_toBottomOf="@+id/com_cimgv_avatar"
+        app:layout_constraintStart_toEndOf="@+id/com_cimgv_avatar"
+        app:layout_constraintTop_toTopOf="@+id/com_cimgv_avatar" />
 
     <TextView
-        android:id="@+id/com_txtv_tech_college"
+        android:id="@+id/com_txtv_college"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
         android:text="TextView"
         android:textColor="@color/com_color_text"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/com_txtv_tech_name"
-        app:layout_constraintStart_toEndOf="@+id/com_txtv_tech_name"
-        app:layout_constraintTop_toTopOf="@+id/com_txtv_tech_name" />
+        app:layout_constraintBottom_toBottomOf="@+id/com_txtv_name"
+        app:layout_constraintStart_toEndOf="@+id/com_txtv_name"
+        app:layout_constraintTop_toTopOf="@+id/com_txtv_name" />
 
     <TextView
-        android:id="@+id/com_txtv_tech_title"
-        android:layout_width="0dp"
+        android:textColor="@color/com_color_title"
+        android:id="@+id/com_txtv_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="13dp"
-        android:maxLines="1"
         android:text="TextView"
-        android:textColor="@color/com_color_title"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/com_cimgv_tech_avatar"
-        app:layout_constraintTop_toBottomOf="@+id/com_cimgv_tech_avatar" />
+        app:layout_constraintStart_toStartOf="@+id/com_cimgv_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/com_cimgv_avatar" />
 
     <TextView
-        android:id="@+id/com_txtv_tech_recent"
+        android:id="@+id/com_txtv_recent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -62,23 +59,17 @@
         android:textColor="@color/com_color_recent"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/com_txtv_tech_title"
-        app:layout_constraintTop_toBottomOf="@+id/com_txtv_tech_title" />
+        app:layout_constraintStart_toStartOf="@+id/com_txtv_title"
+        app:layout_constraintTop_toBottomOf="@+id/com_txtv_title" />
 
     <TextView
-        android:id="@+id/com_txtv_tech_time"
+        android:id="@+id/com_txtv_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
         android:text="TextView"
         android:textColor="@color/com_color_recent"
         android:textSize="11sp"
-        app:layout_constraintStart_toStartOf="@+id/com_guideline"
-        app:layout_constraintTop_toTopOf="@+id/com_txtv_tech_recent" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/com_guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.73333335" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/com_txtv_recent" />
 </android.support.constraint.ConstraintLayout>

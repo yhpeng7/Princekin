@@ -2,21 +2,15 @@ package com.yhklsdf.princekin
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.support.design.internal.BottomNavigationItemView
-import android.support.design.internal.BottomNavigationMenuView
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.FragmentTransaction
-import android.util.TypedValue
-import android.view.View
-import android.view.ViewGroup
 import com.alibaba.android.arouter.launcher.ARouter
 import com.yhklsdf.lib_common.base.BaseActivity
-import com.yhklsdf.module_community.Fragment.CommunityFragment
+import com.yhklsdf.module_community.CommunityFragment
 import com.yhklsdf.module_course.CourseFragment
-import com.yhklsdf.module_home.ui.fragment.HomeFragment
+import com.yhklsdf.module_home.HomeFragment
 import com.yhklsdf.module_mine.MineFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.margin
 
 class MainActivity : BaseActivity() {
 
@@ -43,14 +37,6 @@ class MainActivity : BaseActivity() {
         bottom_navigation.run {
             labelVisibilityMode = 1
             setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
-            val menuView = this.getChildAt(0) as BottomNavigationMenuView
-            for (i in 0 until menuView.childCount) {
-                val iconView: View = menuView.getChildAt(i).findViewById(android.support.design.R.id.icon)
-                val layoutParams = iconView.layoutParams as ViewGroup.MarginLayoutParams
-                val displayMetrics = resources.displayMetrics
-                layoutParams.height = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,32.toFloat(),displayMetrics).toInt()
-                layoutParams.width = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 32.toFloat(), displayMetrics).toInt()
-            }
         }
 
         showFragment(mIndex)

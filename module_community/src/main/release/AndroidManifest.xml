@@ -3,7 +3,7 @@
     package="com.yhklsdf.module_community">
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".Fragment.CommunityFragment" />
+        <activity android:name=".CommunityFragment" />
         <activity android:name=".CommunityActivity"></activity>
     </application>
 
