@@ -3,25 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
-    <android.support.v7.widget.CardView
+    <com.zyp.cardview.YcCardView
         android:id="@+id/com_cardv_life"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="5dp"
         android:elevation="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:ycStartShadowColor="@color/com_color_shadow_life">
+        app:layout_constraintTop_toTopOf="parent">
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/com_cons_life"
+            android:id="@+id/com_cdv_life"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -48,6 +44,7 @@
                 android:layout_marginBottom="14dp"
                 android:lines="1"
                 android:text="Time"
+                android:textColor="@color/com_color_title"
                 android:textSize="11sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/com_imgv_life_like"
@@ -153,6 +150,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/com_txtv_life_title"
                 tools:srcCompat="@tools:sample/avatars" />
         </android.support.constraint.ConstraintLayout>
-    </android.support.v7.widget.CardView>
+    </com.zyp.cardview.YcCardView>
 
 </android.support.constraint.ConstraintLayout>
