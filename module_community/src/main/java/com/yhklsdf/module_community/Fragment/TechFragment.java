@@ -1,4 +1,4 @@
-package com.yhklsdf.module_community;
+package com.yhklsdf.module_community.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,6 +11,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.yhklsdf.module_community.DataBean;
+import com.yhklsdf.module_community.R;
+import com.yhklsdf.module_community.TechAdapter;
 
 import java.util.ArrayList;
 

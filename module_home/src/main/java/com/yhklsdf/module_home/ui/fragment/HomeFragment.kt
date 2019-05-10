@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.h_fragment_home.*
 import kotlinx.android.synthetic.main.h_toolbar.*
 import org.jetbrains.anko.textColorResource
 
-public class HomeFragment : BaseFragment(){
+public class HomeFragment : BaseFragment() {
     companion object {
         fun getInstance(): HomeFragment = HomeFragment()
     }
@@ -29,35 +29,49 @@ public class HomeFragment : BaseFragment(){
         h_tv_honor.textColorResource = R.color.black
         vp_home.adapter = VPHomeAdapter(childFragmentManager)
         vp_home.setOnPageChangeListener(pageChangeListener)
-
+        h_tv_plan.setOnClickListener {
+            setPlan()
+            vp_home.currentItem = 0
+        }
+        h_tv_honor.setOnClickListener {
+            setHonor()
+            vp_home.currentItem = 1
+        }
     }
 
-    private val pageChangeListener =  object : ViewPager.OnPageChangeListener{
+    private val pageChangeListener = object : ViewPager.OnPageChangeListener {
         override fun onPageScrollStateChanged(p0: Int) {
         }
 
         override fun onPageScrolled(p0: Int, p1: Float, p2: Int) {
         }
 
-
         override fun onPageSelected(p0: Int) {
             if (p0 == 0) {
-                h_tv_plan.setBackgroundResource(R.drawable.h_tb_bg)
-                h_tv_plan.textColorResource = R.color.white
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    h_tv_plan.elevation = 7.toFloat()
-                }
-                h_tv_honor.setBackgroundResource(0)
-                h_tv_honor.textColorResource = R.color.black
+                setPlan()
             } else {
-                h_tv_plan.setBackgroundResource(0)
-                h_tv_plan.textColorResource = R.color.black
-                h_tv_honor.setBackgroundResource(R.drawable.h_tb_bg)
-                h_tv_honor.textColorResource = R.color.white
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    h_tv_honor.elevation = 7.toFloat()
-                }
+                setHonor()
             }
+        }
+    }
+
+    fun setPlan() {
+        h_tv_plan.setBackgroundResource(R.drawable.h_tb_bg)
+        h_tv_plan.textColorResource = R.color.white
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            h_tv_plan.elevation = 7.toFloat()
+        }
+        h_tv_honor.setBackgroundResource(0)
+        h_tv_honor.textColorResource = R.color.black
+    }
+
+    fun setHonor() {
+        h_tv_plan.setBackgroundResource(0)
+        h_tv_plan.textColorResource = R.color.black
+        h_tv_honor.setBackgroundResource(R.drawable.h_tb_bg)
+        h_tv_honor.textColorResource = R.color.white
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            h_tv_honor.elevation = 7.toFloat()
         }
     }
 }

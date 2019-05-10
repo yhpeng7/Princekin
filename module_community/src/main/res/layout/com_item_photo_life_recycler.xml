@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/com_cardv_life"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:ycStartShadowColor="@color/com_color_shadow_life">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/com_cons_life"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/com_txtv_life_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="12dp"
+                android:lines="2"
+                android:text="Title"
+                android:textColor="@color/com_color_title"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/com_cimgv_life_avatar"
+                app:layout_constraintTop_toTopOf="@+id/com_cimgv_life_avatar" />
+
+            <TextView
+                android:id="@+id/com_txtv_life_time"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="14dp"
+                android:lines="1"
+                android:text="Time"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/com_imgv_life_like"
+                app:layout_constraintTop_toBottomOf="@+id/com_imgv_life_p2" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/com_cimgv_life_avatar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/com_txtv_life_name"
+                android:layout_width="34dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:autoSizeMaxTextSize="11sp"
+                android:autoSizeMinTextSize="9sp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="用户名"
+                android:textColor="@color/com_color_title"
+                app:layout_constraintEnd_toEndOf="@+id/com_cimgv_life_avatar"
+                app:layout_constraintStart_toStartOf="@+id/com_cimgv_life_avatar"
+                app:layout_constraintTop_toBottomOf="@+id/com_cimgv_life_avatar" />
+
+            <ImageView
+                android:id="@+id/com_imgv_life_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="3dp"
+                android:background="@mipmap/com_icon_like"
+                app:layout_constraintBottom_toBottomOf="@+id/com_txtv_life_time"
+                app:layout_constraintEnd_toStartOf="@+id/com_txtv_life_like"
+                app:layout_constraintTop_toTopOf="@+id/com_txtv_life_time" />
+
+            <ImageView
+                android:id="@+id/com_imgv_life_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginEnd="3dp"
+                android:background="@mipmap/com_icon_comment"
+                app:layout_constraintBottom_toBottomOf="@+id/com_imgv_life_like"
+                app:layout_constraintEnd_toStartOf="@+id/com_txtv_life_comment"
+                app:layout_constraintTop_toTopOf="@+id/com_imgv_life_like" />
+
+            <TextView
+                android:id="@+id/com_txtv_life_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ems="3"
+                android:text="1000"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/com_imgv_life_like"
+                app:layout_constraintEnd_toStartOf="@+id/com_imgv_life_comment"
+                app:layout_constraintTop_toTopOf="@+id/com_imgv_life_like" />
+
+            <TextView
+                android:id="@+id/com_txtv_life_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:ems="3"
+                android:text="1000"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/com_imgv_life_comment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/com_imgv_life_comment" />
+
+            <ImageView
+                android:id="@+id/com_imgv_life_p1"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/com_imgv_life_p2"
+                app:layout_constraintEnd_toStartOf="@+id/com_imgv_life_p2"
+                app:layout_constraintTop_toTopOf="@+id/com_imgv_life_p2"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/com_imgv_life_p2"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/com_imgv_life_p3"
+                app:layout_constraintEnd_toStartOf="@+id/com_imgv_life_p3"
+                app:layout_constraintTop_toTopOf="@+id/com_imgv_life_p3"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/com_imgv_life_p3"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/com_txtv_life_title"
+                tools:srcCompat="@tools:sample/avatars" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

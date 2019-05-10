@@ -31,9 +31,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:background="@mipmap/com_icon_location"
             app:layout_constraintStart_toEndOf="@+id/com_txtv_location"
-            app:layout_constraintTop_toTopOf="@+id/com_txtv_location"
-            android:background="@mipmap/com_icon_location" />
+            app:layout_constraintTop_toTopOf="@+id/com_txtv_location" />
+
         <android.support.constraint.Guideline
             android:id="@+id/com_guideline4"
             android:layout_width="wrap_content"
@@ -46,10 +47,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="7dp"
+            android:background="@mipmap/com_ic_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:background="@mipmap/com_ic_add"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <net.lucode.hackware.magicindicator.MagicIndicator
             android:id="@+id/com_tablayout"
@@ -57,8 +58,10 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"
