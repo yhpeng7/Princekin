@@ -42,7 +42,7 @@
             android:paddingStart="5dp"
             android:maxLines="1"
             android:ellipsize="end"
-            android:background="#BFBFBF"
+            android:background="#ECECEC"
             android:textColor="@color/black"
             android:textSize="12sp" />
 

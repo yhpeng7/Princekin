@@ -26,6 +26,7 @@ public class HomeFragment : BaseFragment(){
     override fun initView(view: View) {
         h_tv_plan.setBackgroundResource(R.drawable.h_tb_bg)
         h_tv_plan.textColorResource = R.color.white
+        h_tv_honor.textColorResource = R.color.black
         vp_home.adapter = VPHomeAdapter(childFragmentManager)
         vp_home.setOnPageChangeListener(pageChangeListener)
     }

@@ -7,9 +7,9 @@
     <com.yhklsdf.lib_common.ui.MyTextView
         android:id="@+id/h_tv_2"
         android:layout_width="30dp"
-        android:layout_height="15dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/h_tv_bg_1"
-        android:textColor="#FF0000"
+        android:textColor="#D41F45"
         android:maxLines="1"
         android:gravity="center"
         android:textSize="11sp" />

@@ -2,7 +2,6 @@ package com.yhklsdf.princekin
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.support.design.internal.BottomNavigationItemView
 import android.support.design.internal.BottomNavigationMenuView
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.FragmentTransaction
@@ -16,7 +15,6 @@ import com.yhklsdf.module_course.CourseFragment
 import com.yhklsdf.module_home.ui.fragment.HomeFragment
 import com.yhklsdf.module_mine.MineFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.margin
 
 class MainActivity : BaseActivity() {
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="83dp">
+    android:layout_height="wrap_content">
 
     <View
         android:id="@+id/h_view4"
@@ -19,10 +19,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:layout_marginStart="13dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:ellipsize="end"
-        android:maxEms="9"
+        android:lineSpacingExtra="2dp"
+        android:maxEms="8"
         android:maxLines="2"
+        android:text="也正由也正由于这期的内容是更为专项的于这期的内容是更为专项的也正由于这期的内容是更为专项的"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/h_news_image"
@@ -33,10 +35,10 @@
     <ImageView
         android:id="@+id/h_news_image"
         android:layout_width="115dp"
-        android:layout_height="67dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,21 +47,23 @@
     <com.yhklsdf.lib_common.ui.MyTextView
         android:id="@+id/h_news_stick"
         android:layout_width="30dp"
-        android:layout_height="14dp"
-        android:layout_marginBottom="9dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
         android:layout_marginStart="13dp"
         android:background="@drawable/h_tv_bg_1"
         android:gravity="center"
         android:text="置顶"
-        android:textColor="#E74467"
+        android:textColor="#D41F45"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/h_news_sourse"
+        app:layout_constraintEnd_toStartOf="@+id/h_news_sourse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/h_news_sourse" />
 
     <com.yhklsdf.lib_common.ui.MyTextView
         android:id="@+id/h_news_sourse"
         android:layout_width="wrap_content"
-        android:layout_height="15dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="13dp"
         android:textColor="#888888"
