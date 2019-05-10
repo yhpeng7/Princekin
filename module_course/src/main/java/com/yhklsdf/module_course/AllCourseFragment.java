@@ -45,20 +45,67 @@ public class AllCourseFragment extends Fragment {
     private void initData() {
         mHotCourseData = new ArrayList<>();
         mRecommendCourseData = new ArrayList<>();
-        Course course = new Course();
-        course.setCourseName("JAVA零基础从入门到精通");
-        course.setType("免费");
-        course.setJoinCount(3460);
-        for (int i=0; i<9; i++) {
-            mHotCourseData.add(course);
-        }
         Course course1 = new Course();
+        course1.setCourseImgUrl(R.mipmap.couse2);
         course1.setCourseName("JAVA零基础从入门到精通");
         course1.setType("免费");
         course1.setJoinCount(3460);
-        course1.setType("精品付费");
-        for (int i=0; i<9; i++) {
-            mRecommendCourseData.add(course1);
-        }
+        mHotCourseData.add(course1);
+
+        Course course2 = new Course();
+        course2.setCourseImgUrl(R.mipmap.couse4);
+        course2.setCourseName("Python基础课程");
+        course2.setType("免费");
+        course2.setJoinCount(3390);
+        mHotCourseData.add(course2);
+
+        Course course3 = new Course();
+        course3.setJoinCount(2345);
+        course3.setCourseImgUrl(R.mipmap.couse5);
+        course3.setCourseName("UI视觉设计");
+        course3.setType("免费");
+        mHotCourseData.add(course3);
+
+        Course course4 = new Course();
+        course4.setJoinCount(4366);
+        course4.setCourseImgUrl(R.mipmap.couse6);
+        course4.setCourseName("大数据");
+        course4.setType("免费");
+        mHotCourseData.add(course4);
+
+        Course course5 = new Course();
+        course5.setJoinCount(5234);
+        course5.setCourseImgUrl(R.mipmap.couse1);
+        course5.setCourseName("Linux C语言");
+        course5.setType("限免");
+        mHotCourseData.add(course5);
+
+        Course course6 = new Course();
+        course6.setJoinCount(2345);
+        course6.setCourseImgUrl(R.mipmap.couse3);
+        course6.setCourseName("平面设计");
+        course6.setType("付费");
+        mHotCourseData.add(course6);
+
+        Course course7 = new Course();
+        course7.setCourseName("JAVA");
+        course7.setJoinCount(3460);
+        course7.setType("精品付费");
+        course7.setCourseImgUrl(R.mipmap.couse7);
+        mRecommendCourseData.add(course7);
+
+        Course course8 = new Course();
+        course8.setCourseName("C++");
+        course8.setJoinCount(3460);
+        course8.setType("精品付费");
+        course8.setCourseImgUrl(R.mipmap.couse8);
+        mRecommendCourseData.add(course8);
+
+        Course course9 = new Course();
+        course9.setCourseName("C语言");
+        course9.setJoinCount(3460);
+        course9.setType("精品付费");
+        course9.setCourseImgUrl(R.mipmap.couse9);
+        mRecommendCourseData.add(course9);
     }
 }

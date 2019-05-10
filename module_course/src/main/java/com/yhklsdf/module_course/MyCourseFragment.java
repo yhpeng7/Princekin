@@ -45,18 +45,40 @@ public class MyCourseFragment extends Fragment {
     private void initData() {
         mBuyCourseData = new ArrayList<>();
         mStudyCourseData = new ArrayList<>();
-        Course course = new Course();
-        course.setCourseName("JAVA零基础从入门到精通");
-        course.setType("付费");
-        course.setJoinCount(3460);
-        for (int i = 0; i < 9; i++) {
-            mBuyCourseData.add(course);
-        }
-        StudyCourse studyCourse = new StudyCourse();
-        studyCourse.setCourseName("JAVA零基础从入门到精通");
-        studyCourse.setCouseProgress(56);
-        for (int i = 0; i < 11; i++) {
-            mStudyCourseData.add(studyCourse);
-        }
+        Course course1 = new Course();
+        course1.setCourseImgUrl(R.mipmap.couse2);
+        course1.setCourseName("JAVA零基础从入门到精通");
+        course1.setType("付费");
+        course1.setJoinCount(3460);
+        mBuyCourseData.add(course1);
+
+        Course course2 = new Course();
+        course2.setCourseImgUrl(R.mipmap.couse4);
+        course2.setCourseName("Python基础课程");
+        course2.setType("付费");
+        course2.setJoinCount(3390);
+        mBuyCourseData.add(course2);
+
+        Course course3 = new Course();
+        course3.setJoinCount(2345);
+        course3.setCourseImgUrl(R.mipmap.couse5);
+        course3.setCourseName("UI视觉设计");
+        course3.setType("付费");
+        mBuyCourseData.add(course3);
+
+        StudyCourse studyCourse1 = new StudyCourse();
+        studyCourse1.setCourseUrl(R.mipmap.couse2);
+        studyCourse1.setCouseProgress(9);
+        mStudyCourseData.add(studyCourse1);
+
+        StudyCourse studyCourse2 = new StudyCourse();
+        studyCourse2.setCourseUrl(R.mipmap.couse4);
+        studyCourse2.setCouseProgress(56);
+        mStudyCourseData.add(studyCourse2);
+
+        StudyCourse studyCourse3 = new StudyCourse();
+        studyCourse3.setCourseUrl(R.mipmap.couse5);
+        studyCourse3.setCouseProgress(33);
+        mStudyCourseData.add(studyCourse3);
     }
 }

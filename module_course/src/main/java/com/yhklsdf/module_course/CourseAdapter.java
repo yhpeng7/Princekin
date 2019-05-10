@@ -76,7 +76,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
         }
 
         public void onBindData(Context context, Course course) {
-            Glide.with(context).load(R.mipmap.java_course).into(mCourseImg);
+            Glide.with(context).load(course.getCourseImgUrl()).into(mCourseImg);
             mCourseName.setText(course.getCourseName());
             mCourseType.setText(course.getType());
             mJoinCount.setText(String.valueOf(course.getJoinCount()));

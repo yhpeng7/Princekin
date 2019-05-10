@@ -1,16 +1,16 @@
 package com.yhklsdf.module_course.data;
 
 public class Course {
-    private String mCourseImgUrl;
+    private int mCourseImgUrl;
     private String mCourseName;
     private String mType;
     private int mJoinCount;
 
-    public String getCourseImgUrl() {
+    public int getCourseImgUrl() {
         return mCourseImgUrl;
     }
 
-    public void setCourseImgUrl(String courseImgUrl) {
+    public void setCourseImgUrl(int courseImgUrl) {
         mCourseImgUrl = courseImgUrl;
     }
 

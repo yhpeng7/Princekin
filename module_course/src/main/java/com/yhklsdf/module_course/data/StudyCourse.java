@@ -1,18 +1,18 @@
 package com.yhklsdf.module_course.data;
 
 public class StudyCourse {
-    private String mCourseUrl;
+    private int mCourseUrl;
     private String mCourseName;
     private int mCouseProgress;
 
     public StudyCourse() {
     }
 
-    public String getCourseUrl() {
+    public int getCourseUrl() {
         return mCourseUrl;
     }
 
-    public void setCourseUrl(String courseUrl) {
+    public void setCourseUrl(int courseUrl) {
         mCourseUrl = courseUrl;
     }
 

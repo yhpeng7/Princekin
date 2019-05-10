@@ -11,6 +11,7 @@ object KeyBoardUtil {
     /**
      * 是否落在 EditText 区域
      */
+    @JvmStatic
     fun isHideKeyboard(view: View?, event: MotionEvent): Boolean {
         if (view != null && view is EditText) {
             val location = intArrayOf(0, 0)
@@ -30,6 +31,7 @@ object KeyBoardUtil {
     /**
      * 关闭软键盘
      */
+    @JvmStatic
     fun hideKeyBoard(context: Context, view: View?) {
         val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(view!!.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)

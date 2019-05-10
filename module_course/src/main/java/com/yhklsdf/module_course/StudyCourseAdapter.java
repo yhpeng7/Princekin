@@ -75,7 +75,7 @@ public class StudyCourseAdapter extends RecyclerView.Adapter<StudyCourseAdapter.
         }
 
         public void onBindData(Context context, StudyCourse course) {
-            Glide.with(context).load(R.mipmap.java_course).into(mCourseImg);
+            Glide.with(context).load(course.getCourseUrl()).into(mCourseImg);
             mTVCourseSchedule.setText(course.getCouseProgress()+"%");
             mPBCourseSchedule.setProgress(course.getCouseProgress());
         }
