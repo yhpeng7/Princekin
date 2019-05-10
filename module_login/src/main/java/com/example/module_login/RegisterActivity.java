@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.yhklsdf.lib_common.base.BaseActivity;
 
 @Route(path = "/login/register")
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{

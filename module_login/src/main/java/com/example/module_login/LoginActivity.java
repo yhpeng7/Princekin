@@ -5,11 +5,11 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
+import com.yhklsdf.lib_common.utils.KeyBoardUtil;
 
-@Route(path = "/login/login")
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     @SuppressLint("NewApi")
@@ -40,5 +40,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         } else if (id==R.id.tv_cancel) {
             finish();
         }
+    }
+
+    /**
+     * 点击空白处 隐藏键盘
+     */
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (ev.getAction() == MotionEvent.ACTION_UP) {
+            View v = getCurrentFocus();
+            if (KeyBoardUtil.isHideKeyboard(v,ev)) {
+                KeyBoardUtil.hideKeyBoard(this,v);
+            }
+        }
+        return super.dispatchTouchEvent(ev);
     }
 }
