@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="95dp">
+
+    <View
+        android:id="@+id/h_view5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#EDEDED"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/h_iv_job_details_2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.yhklsdf.lib_common.ui.MyTextView
+        android:id="@+id/h_tv_job_details_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/h_iv_job_details_2"
+        app:layout_constraintStart_toEndOf="@+id/h_iv_job_details_2"
+        app:layout_constraintTop_toTopOf="@+id/h_iv_job_details_2" />
+
+    <com.yhklsdf.lib_common.ui.MyTextView
+        android:id="@+id/h_tv_job_details_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/h_tv_job_details_6"
+        app:layout_constraintStart_toEndOf="@+id/h_tv_job_details_6"
+        app:layout_constraintTop_toTopOf="@+id/h_tv_job_details_6" />
+
+    <com.yhklsdf.lib_common.ui.MyTextView
+        android:id="@+id/h_tv_job_details_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/h_tv_job_details_7"
+        app:layout_constraintStart_toEndOf="@+id/h_tv_job_details_7"
+        app:layout_constraintTop_toTopOf="@+id/h_tv_job_details_7" />
+
+    <com.yhklsdf.lib_common.ui.MyTextView
+        android:id="@+id/h_tv_job_details_9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:maxLines="3"
+        android:text="黄飞鸿，毕业于西安邮电大学电子工程学院。曾就任校科协主席、荣获过2015年国家奖学金。于2016年被腾讯招作JAVA实习生，并与2016年末正式签约入职"
+        android:textColor="#707070"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/h_tv_job_details_6"
+        app:layout_constraintTop_toBottomOf="@+id/h_iv_job_details_2" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageButton
+            android:id="@+id/h_btn_job_details_1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="16dp"
+            android:background="@mipmap/job_details_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.yhklsdf.lib_common.ui.MyTextView
+            android:id="@+id/h_textview8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="职位详情"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/h_btn_job_details_2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="11dp"
+            android:background="@mipmap/job_details_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:id="@+id/h_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/h_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="13dp"
+                    android:elevation="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/h_iv_job_details_1"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="13dp"
+                            android:background="@drawable/test_job_1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/h_job_details_container_1" />
+
+                        <com.yhklsdf.lib_common.ui.MyTextView
+                            android:id="@+id/h_tv_job_details_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:text="JAVA开发"
+                            android:textColor="#2D6FAA"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:id="@+id/h_job_details_container_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="7dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/h_tv_job_details_1" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="年底双薪"
+                                android:textSize="8sp"
+                                android:textColor="#858585"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/h_job_tv_bg"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="五险一金"
+                                android:textSize="8sp"
+                                android:textColor="#858585"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/h_job_tv_bg"/>
+                        </LinearLayout>
+
+                        <com.yhklsdf.lib_common.ui.MyTextView
+                            android:id="@+id/h_tv_job_details_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="11dp"
+                            android:text="80万"
+                            android:textColor="#E62E20"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.yhklsdf.lib_common.ui.MyTextView
+                            android:id="@+id/h_textview11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="年薪："
+                            android:textColor="#E62E20"
+                            app:layout_constraintEnd_toStartOf="@+id/h_tv_job_details_2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.yhklsdf.lib_common.ui.MyTextView
+                            android:id="@+id/h_tv_job_details_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginBottom="31dp"
+                            android:text="深圳腾讯有限公司"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/h_iv_job_details_1"
+                            app:layout_constraintStart_toEndOf="@+id/h_iv_job_details_1" />
+
+                        <com.yhklsdf.lib_common.ui.MyTextView
+                            android:id="@+id/h_tv_job_details_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="上市公司 | 互联网 | 2000+人"
+                            android:textColor="#858585"
+                            android:textSize="11sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/h_iv_job_details_1"
+                            app:layout_constraintStart_toEndOf="@+id/h_iv_job_details_1" />
+
+                        <ImageButton
+                            android:id="@+id/h_imagebutton2"
+                            android:layout_width="7dp"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="64dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@drawable/black_background"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/h_cardview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="13dp"
+                    android:elevation="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/h_cardview">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.yhklsdf.lib_common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="职位要求"
+                            android:textColor="#2D6FAA"
+                            android:textSize="14sp" />
+
+                        <com.yhklsdf.lib_common.ui.MyTextView
+                            android:id="@+id/h_tv_job_details_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="19dp"
+                            android:text="@string/h_text_job"
+                            android:textColor="#545454"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="13dp"
+                    android:elevation="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/h_cardview2">
+
+                    <LinearLayout
+                        android:id="@+id/h_job_details_container_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="vertical">
+
+                        <com.yhklsdf.lib_common.ui.MyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="校友信息"
+                            android:textColor="#2D6FAA"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp">
+
+        <View
+            android:id="@+id/h_view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="6dp"
+            android:background="#F1F1F1"
+            app:layout_constraintBottom_toTopOf="@+id/h_btn_job_details_5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageButton
+            android:id="@+id/h_btn_job_details_3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="21dp"
+            android:layout_marginBottom="17dp"
+            android:background="@mipmap/job_details_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.yhklsdf.lib_common.ui.MyTextView
+            android:id="@+id/h_btn_job_details_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:text="收藏"
+            android:textColor="#A1A1A1"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/h_btn_job_details_3"
+            app:layout_constraintStart_toEndOf="@+id/h_btn_job_details_3"
+            app:layout_constraintTop_toTopOf="@+id/h_btn_job_details_3" />
+
+        <Button
+            android:id="@+id/h_btn_job_details_5"
+            android:layout_width="242dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="6dp"
+            android:gravity="center"
+            android:text="投递简历"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:bl_corners_radius="4dp"
+            app:bl_unPressed_drawable="#2D6FAA"
+            app:bl_ripple_color="#48ADF3"
+            app:bl_ripple_enable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

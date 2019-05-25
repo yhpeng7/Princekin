@@ -1,6 +1,7 @@
 package com.yhklsdf.module_home.ui.fragment
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.widget.ImageView
@@ -13,11 +14,14 @@ import com.yhklsdf.module_home.adapter.VPHomeAdapter
 import com.yhklsdf.module_home.bean.CompetitionBean
 import com.yhklsdf.module_home.bean.NewsBean
 import com.yhklsdf.module_home.bean.TextBannerBean
+import com.yhklsdf.module_home.ui.activity.JobDetailsActivity
 import com.yhklsdf.module_home.utils.GlideImageLoader
 import com.youth.banner.BannerConfig
+import kotlinx.android.synthetic.main.h_activity_job_details.*
 import kotlinx.android.synthetic.main.h_fragment_home.*
 import kotlinx.android.synthetic.main.h_fragment_plan.*
 import kotlinx.android.synthetic.main.h_item_home_news.*
+import org.jetbrains.anko.support.v4.startActivity
 
 class PlanFragment : BaseFragment() {
 
@@ -47,12 +51,12 @@ class PlanFragment : BaseFragment() {
     )
 
     val news = mutableListOf(
-            NewsBean(true,"学校宣布任命三名处级干部","西邮新闻网",7000,R.drawable.test_news_1,""),
-            NewsBean(true,"我校师生收看纪念五四运动100周年大会实况","西邮新闻网",6875,R.drawable.test_news_2,""),
-            NewsBean(false,"报名帖|促学风系列之西邮创业论坛---三节课创始人","西邮新闻网",7000,R.drawable.test_news_3,""),
-            NewsBean(false,"学校宣布任命三名处级干部","西邮新闻网",7000,R.drawable.test_news_1,""),
-            NewsBean(false,"我校师生收看纪念五四运动100周年大会实况","西邮新闻网",6875,R.drawable.test_news_2,""),
-            NewsBean(false,"报名帖|促学风系列之西邮创业论坛---三节课创始人","西邮新闻网",7000,R.drawable.test_news_3,"")
+            NewsBean(true,false,"学校宣布任命三名处级干部","西邮新闻网",7000,R.drawable.test_news_1,""),
+            NewsBean(false,true,"我校师生收看纪念五四运动100周年大会实况","西邮新闻网",6875,R.drawable.test_news_2,""),
+            NewsBean(false,false,"报名帖|促学风系列之西邮创业论坛---三节课创始人","西邮新闻网",7000,R.drawable.test_news_3,""),
+            NewsBean(false,false,"学校宣布任命三名处级干部","西邮新闻网",7000,R.drawable.test_news_1,""),
+            NewsBean(false,false,"我校师生收看纪念五四运动100周年大会实况","西邮新闻网",6875,R.drawable.test_news_2,""),
+            NewsBean(false,false,"报名帖|促学风系列之西邮创业论坛---三节课创始人","西邮新闻网",7000,R.drawable.test_news_3,"")
     )
 
     override fun attachLayoutRes() = R.layout.h_fragment_plan
@@ -76,9 +80,13 @@ class PlanFragment : BaseFragment() {
             message.text = t.messae
             h_view_flipper.addView(itemView)
         }
-
         h_view_flipper.setFlipInterval(2000)
         h_view_flipper.startFlipping()
+        h_view_flipper.setOnClickListener {
+            Intent(activity,JobDetailsActivity::class.java).run {
+                startActivity(this)
+            }
+        }
 
         val manager = LinearLayoutManager(activity)
         manager.orientation = LinearLayoutManager.HORIZONTAL
@@ -86,14 +94,20 @@ class PlanFragment : BaseFragment() {
         h_rv_1.adapter = RVCompetitionAdapter(vp_items)
 
         news.forEach { t ->
-            val itemView = layoutInflater.inflate(R.layout.h_item_home_news,null)
+            val itemView = layoutInflater.inflate(R.layout.h_item_home_news,h_job_details_container_2,false)
+            if(t == news[0]){
+                val view : View = itemView.findViewById(R.id.h_view4)
+                view.visibility = View.GONE
+            }
             val stick : TextView = itemView.findViewById(R.id.h_news_stick)
             val title : TextView = itemView.findViewById(R.id.h_news_title)
             val source : TextView = itemView.findViewById(R.id.h_news_sourse)
             val pageView : TextView = itemView.findViewById(R.id.h_news_pageview)
             val image : ImageView = itemView.findViewById(R.id.h_news_image)
-            if (!t.isStick) {
-                stick.visibility = View.GONE
+            when {
+                t.isStick -> stick.text = "置顶"
+                t.isHot -> stick.text = "热门"
+                else -> stick.visibility = View.GONE
             }
             title.text = t.title
             source.text = t.source

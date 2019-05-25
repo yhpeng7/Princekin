@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.h_fragment_home.*
 import kotlinx.android.synthetic.main.h_toolbar.*
 import org.jetbrains.anko.textColorResource
 
-public class HomeFragment : BaseFragment() {
+class HomeFragment : BaseFragment() {
     companion object {
         fun getInstance(): HomeFragment = HomeFragment()
     }
@@ -24,11 +24,11 @@ public class HomeFragment : BaseFragment() {
     }
 
     override fun initView(view: View) {
-        h_tv_plan.setBackgroundResource(R.drawable.h_tb_bg)
-        h_tv_plan.textColorResource = R.color.white
-        h_tv_honor.textColorResource = R.color.black
+        setPlan()
         vp_home.adapter = VPHomeAdapter(childFragmentManager)
+
         vp_home.setOnPageChangeListener(pageChangeListener)
+
         h_tv_plan.setOnClickListener {
             setPlan()
             vp_home.currentItem = 0

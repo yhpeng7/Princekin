@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar
 import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
+import com.noober.background.BackgroundLibrary
 import com.yhklsdf.lib_common.constant.Constant
 import com.yhklsdf.lib_common.event.NetworkChangeEvent
 import com.yhklsdf.lib_common.receiver.NetworkChangeReceiver
@@ -60,6 +61,7 @@ abstract class BaseActivity : AppCompatActivity() {
     abstract fun start()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        BackgroundLibrary.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(attachLayoutRes())
         if (useEventBus()) {
@@ -118,7 +120,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     protected fun initToolbar(toolbar: Toolbar, homeAsUpEnabled: Boolean, title: String) {
-        toolbar?.title = title
+        toolbar.title = title
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(homeAsUpEnabled)
     }

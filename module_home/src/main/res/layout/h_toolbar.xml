@@ -9,7 +9,7 @@
     android:background="@color/colorPrimary"
     app:elevation="7dp">
 
-    <ImageView
+    <ImageButton
         android:id="@+id/h_imageview"
         android:layout_width="24dp"
         android:layout_height="24dp"
@@ -19,7 +19,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/home_1" />
+        android:background="@mipmap/home_1" />
 
     <com.yhklsdf.lib_common.ui.MyTextView
         android:id="@+id/h_tv_plan"

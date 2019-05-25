@@ -8,10 +8,10 @@ import com.yhklsdf.module_home.ui.fragment.PlanFragment
 
 class VPHomeAdapter(val fm: FragmentManager) : FragmentPagerAdapter(fm){
 
-    val fragments = listOf<Fragment>(PlanFragment(), HonorFragment())
+    private val fragments = listOf<Fragment>(PlanFragment(), HonorFragment())
 
     override fun getItem(p0: Int): Fragment {
-        return fragments[p0];
+        return fragments[p0]
     }
 
     override fun getCount(): Int {

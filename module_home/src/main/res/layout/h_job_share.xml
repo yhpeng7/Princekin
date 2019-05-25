@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="11dp"
+    android:id="@+id/h_job_share">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#48ADF3">
+
+        <com.yhklsdf.lib_common.ui.MyTextView
+            android:id="@+id/h_textview9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="分享到"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/h_iv_job_share_1"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="48dp"
+            android:background="@drawable/h_share_iv_bg"
+            android:src="@mipmap/job_share_1"
+            app:layout_constraintEnd_toEndOf="@+id/h_textview9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/h_textview9" />
+
+        <ImageButton
+            android:id="@+id/h_iv_job_share_2"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/h_share_iv_bg"
+            android:padding="10dp"
+            android:src="@mipmap/job_share_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/h_textview9"
+            app:layout_constraintTop_toBottomOf="@+id/h_textview9" />
+
+        <ImageButton
+            android:id="@+id/h_iv_job_share_3"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="51dp"
+            android:background="@drawable/h_share_iv_bg"
+            android:padding="10dp"
+            android:src="@mipmap/job_share_3"
+            app:layout_constraintBottom_toTopOf="@+id/h_tv_job_share"
+            app:layout_constraintStart_toStartOf="@+id/h_iv_job_share_1"
+            app:layout_constraintTop_toBottomOf="@+id/h_iv_job_share_1" />
+
+        <ImageButton
+            android:id="@+id/h_iv_job_share_4"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="30dp"
+            android:padding="16dp"
+            android:background="@drawable/h_share_iv_bg"
+            android:src="@mipmap/job_share_4"
+            app:layout_constraintEnd_toEndOf="@+id/h_iv_job_share_2"
+            app:layout_constraintTop_toBottomOf="@+id/h_iv_job_share_2" />
+
+        <com.yhklsdf.lib_common.ui.MyTextView
+            android:id="@+id/h_tv_job_share"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#47AAEF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
