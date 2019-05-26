@@ -11,24 +11,35 @@ import android.view.animation.DecelerateInterpolator
 
 object AnimatorUtil {
 
-    private val accelerateDecelerateInterpolator : AccelerateDecelerateInterpolator by lazy {
+    private val accelerateDecelerateInterpolator: AccelerateDecelerateInterpolator by lazy {
         AccelerateDecelerateInterpolator()
     }
 
-    private val accelerateInterpolator : AccelerateInterpolator by lazy {
+    private val accelerateInterpolator: AccelerateInterpolator by lazy {
         AccelerateInterpolator()
     }
 
-    private val decelerateInterpolator : DecelerateInterpolator by lazy {
+    private val decelerateInterpolator: DecelerateInterpolator by lazy {
         DecelerateInterpolator()
     }
 
-    private val bounceInterpolator : BounceInterpolator by lazy {
+    private val bounceInterpolator: BounceInterpolator by lazy {
         BounceInterpolator()
     }
 
-    private val linearOutSlowInInterpolator : LinearOutSlowInInterpolator by lazy {
+    private val linearOutSlowInInterpolator: LinearOutSlowInInterpolator by lazy {
         LinearOutSlowInInterpolator()
+    }
+
+    fun scaleShow(view: View) {
+        view.visibility = View.VISIBLE
+        ViewCompat.animate(view)
+                .scaleX(1.0f)
+                .scaleY(1.0f)
+                .alpha(1.0f)
+                .setDuration(1000)
+                .setInterpolator(linearOutSlowInInterpolator)
+                .start()
     }
 
     fun scaleShow(view: View, listener: ViewPropertyAnimatorListener) {
