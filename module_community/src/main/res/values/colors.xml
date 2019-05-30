@@ -16,4 +16,5 @@
     <color name="com_color_back_rent">#F3DFFA</color>
     <color name="com_color_back_seconde">#E3FFF4</color>
     <color name="com_color_back_work">#FFDDF6</color>
+    <color name="lib_color_search_tip">#9c9ea1</color>
 </resources>

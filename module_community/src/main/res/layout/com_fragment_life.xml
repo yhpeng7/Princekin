@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <net.lucode.hackware.magicindicator.MagicIndicator
-        android:id="@+id/com_life_magic_indicator"
+        android:id="@+id/com_mgc_indicator_life"
         android:layout_width="wrap_content"
         android:layout_height="38dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,21 +17,21 @@
     </net.lucode.hackware.magicindicator.MagicIndicator>
 
     <ImageView
-        android:id="@+id/com_life_divider"
+        android:id="@+id/com_imgv_divider_life"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/com_color_life_divider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/com_life_magic_indicator" />
+        app:layout_constraintTop_toBottomOf="@+id/com_mgc_indicator_life" />
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/com_life_view_pager"
+        android:id="@+id/com_vpager_life"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/com_life_divider" />
+        app:layout_constraintTop_toTopOf="@id/com_imgv_divider_life" />
 
 </android.support.constraint.ConstraintLayout>

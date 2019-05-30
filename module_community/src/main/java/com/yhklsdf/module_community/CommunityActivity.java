@@ -18,7 +18,7 @@ public class CommunityActivity extends AppCompatActivity {
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.com_activity_community);
-        com_test_viewpager = findViewById(R.id.com_test_viewpager);
+        com_test_viewpager = findViewById(R.id.com_vpager_test);
         CommunityFragment communityFragment = new CommunityFragment();
         fragmentList = new ArrayList<>();
         fragmentList.add(communityFragment);
