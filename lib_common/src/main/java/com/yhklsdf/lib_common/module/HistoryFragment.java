@@ -1,4 +1,4 @@
-package com.yhklsdf.module_community;
+package com.yhklsdf.lib_common.module;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,6 +12,8 @@ import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.yhklsdf.lib_common.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -202,37 +204,27 @@ public class HistoryFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.lib_txtv_search_history_1:
-                mSearchActivity.setSearchContent(mHistoryList.get(0));
-                break;
-            case R.id.lib_txtv_search_history_2:
-                mSearchActivity.setSearchContent(mHistoryList.get(1));
-                break;
-            case R.id.lib_txtv_search_history_3:
-                mSearchActivity.setSearchContent(mHistoryList.get(2));
-                break;
-            case R.id.lib_txtv_search_history_4:
-                mSearchActivity.setSearchContent(mHistoryList.get(3));
-                break;
-            case R.id.lib_txtv_search_history_5:
-                mSearchActivity.setSearchContent(mHistoryList.get(4));
-                break;
-            case R.id.lib_txtv_search_history_6:
-                mSearchActivity.setSearchContent(mHistoryList.get(5));
-                break;
-            case R.id.lib_txtv_search_history_7:
-                mSearchActivity.setSearchContent(mHistoryList.get(6));
-                break;
-            case R.id.lib_txtv_search_history_8:
-                mSearchActivity.setSearchContent(mHistoryList.get(7));
-                break;
-            case R.id.lib_txtv_search_history_9:
-                mSearchActivity.setSearchContent(mHistoryList.get(8));
-                break;
-            case R.id.lib_txtv_search_history_10:
-                mSearchActivity.setSearchContent(mHistoryList.get(9));
-                break;
+        int i = v.getId();
+        if (i == R.id.lib_txtv_search_history_1) {
+            mSearchActivity.setSearchContent(mHistoryList.get(0));
+        } else if (i == R.id.lib_txtv_search_history_2) {
+            mSearchActivity.setSearchContent(mHistoryList.get(1));
+        } else if (i == R.id.lib_txtv_search_history_3) {
+            mSearchActivity.setSearchContent(mHistoryList.get(2));
+        } else if (i == R.id.lib_txtv_search_history_4) {
+            mSearchActivity.setSearchContent(mHistoryList.get(3));
+        } else if (i == R.id.lib_txtv_search_history_5) {
+            mSearchActivity.setSearchContent(mHistoryList.get(4));
+        } else if (i == R.id.lib_txtv_search_history_6) {
+            mSearchActivity.setSearchContent(mHistoryList.get(5));
+        } else if (i == R.id.lib_txtv_search_history_7) {
+            mSearchActivity.setSearchContent(mHistoryList.get(6));
+        } else if (i == R.id.lib_txtv_search_history_8) {
+            mSearchActivity.setSearchContent(mHistoryList.get(7));
+        } else if (i == R.id.lib_txtv_search_history_9) {
+            mSearchActivity.setSearchContent(mHistoryList.get(8));
+        } else if (i == R.id.lib_txtv_search_history_10) {
+            mSearchActivity.setSearchContent(mHistoryList.get(9));
         }
     }
 }

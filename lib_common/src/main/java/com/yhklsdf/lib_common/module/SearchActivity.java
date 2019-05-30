@@ -1,4 +1,4 @@
-package com.yhklsdf.module_community;
+package com.yhklsdf.lib_common.module;
 
 import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
@@ -15,7 +15,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.google.gson.Gson;
+import com.yhklsdf.lib_common.R;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -28,6 +32,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
+@Route(path = "/lib/search")
 public class SearchActivity extends AppCompatActivity {
     private ImageView lib_imgv_search_back;
     private TextView lib_txtv_search_cancel;
@@ -41,7 +46,8 @@ public class SearchActivity extends AppCompatActivity {
     private SharedPreferences mHistoryPreferences;
     private SharedPreferences.Editor mEditor;
     private List<String> mHistoryList;
-    private String[] tempData = {"EPI实验室", "书法协会", "校青协", "手机爱好者俱乐部", "腾讯", "大学生创新创业协会", "花粥的歌", "大学生艺术团"};    //测试数据
+    private String[] tempData = {"EPI实验室", "书法协会", "校青协", "手机爱好者俱乐部", "腾讯", "大学生创新创业协会", "花粥的歌", "大学生艺术团"};
+    //测试数据
     private List<String> resultList;
     private Gson mGson;
 

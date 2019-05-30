@@ -26,5 +26,6 @@
             android:value="640" />
 
         <receiver android:name=".receiver.NetworkChangeReceiver" />
+        <activity android:name=".module.SearchActivity"/>
     </application>
 </manifest>

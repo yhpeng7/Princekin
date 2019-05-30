@@ -19,7 +19,7 @@ android {
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
-//        resourcePrefix "com_"
+        resourcePrefix "com_"
 
         multiDexEnabled true
         kapt {
