@@ -46,7 +46,7 @@
             android:layout_marginEnd="55dp"
             android:background="@drawable/h_share_iv_bg"
             android:padding="10dp"
-            android:src="@mipmap/job_share_2"
+            android:src="@mipmap/job_share_3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/h_textview9"
             app:layout_constraintTop_toBottomOf="@+id/h_textview9" />
@@ -59,7 +59,7 @@
             android:layout_marginBottom="51dp"
             android:background="@drawable/h_share_iv_bg"
             android:padding="10dp"
-            android:src="@mipmap/job_share_3"
+            android:src="@mipmap/job_share_2"
             app:layout_constraintBottom_toTopOf="@+id/h_tv_job_share"
             app:layout_constraintStart_toStartOf="@+id/h_iv_job_share_1"
             app:layout_constraintTop_toBottomOf="@+id/h_iv_job_share_1" />

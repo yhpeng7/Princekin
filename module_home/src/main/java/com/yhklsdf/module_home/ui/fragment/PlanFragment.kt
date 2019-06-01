@@ -14,6 +14,7 @@ import com.yhklsdf.module_home.adapter.VPHomeAdapter
 import com.yhklsdf.module_home.bean.CompetitionBean
 import com.yhklsdf.module_home.bean.NewsBean
 import com.yhklsdf.module_home.bean.TextBannerBean
+import com.yhklsdf.module_home.ui.activity.HighDynamicActivity
 import com.yhklsdf.module_home.ui.activity.JobDetailsActivity
 import com.yhklsdf.module_home.utils.GlideImageLoader
 import com.youth.banner.BannerConfig
@@ -71,6 +72,8 @@ class PlanFragment : BaseFragment() {
                 .setImageLoader(GlideImageLoader())
                 .isAutoPlay(true)
                 .start()
+
+        h_home_plan_iv_0.setOnClickListener { startActivity(Intent(activity,HighDynamicActivity::class.java)) }
 
         textBanners.forEach { t ->
             val itemView = layoutInflater.inflate(R.layout.h_item_view_flipper, null)

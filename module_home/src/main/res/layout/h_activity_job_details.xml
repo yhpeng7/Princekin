@@ -75,6 +75,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <android.support.constraint.ConstraintLayout
+                        android:id="@+id/h_ly_job_info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -109,25 +110,25 @@
                             android:layout_marginTop="7dp"
                             android:orientation="horizontal"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/h_tv_job_details_1" >
+                            app:layout_constraintTop_toBottomOf="@+id/h_tv_job_details_1">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginEnd="5dp"
+                                android:background="@drawable/h_job_tv_bg"
                                 android:text="年底双薪"
-                                android:textSize="8sp"
                                 android:textColor="#858585"
-                                android:layout_marginEnd="5dp"
-                                android:background="@drawable/h_job_tv_bg"/>
+                                android:textSize="8sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="五险一金"
-                                android:textSize="8sp"
-                                android:textColor="#858585"
                                 android:layout_marginEnd="5dp"
-                                android:background="@drawable/h_job_tv_bg"/>
+                                android:background="@drawable/h_job_tv_bg"
+                                android:text="五险一金"
+                                android:textColor="#858585"
+                                android:textSize="8sp" />
                         </LinearLayout>
 
                         <com.yhklsdf.lib_common.ui.MyTextView
