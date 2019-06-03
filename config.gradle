@@ -1,5 +1,5 @@
 ext {
-    isApplication = true
+    isApplication = false
     android = [
             compileSdkVersion: 28,
             buildToolsVersion: "28.0.3",

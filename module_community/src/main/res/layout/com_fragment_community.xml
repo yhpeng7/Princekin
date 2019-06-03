@@ -10,30 +10,10 @@
         android:id="@+id/com_constraintlayout"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/com_color_toolbar_gradient"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/com_txtv_main_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="13dp"
-            android:text="西邮"
-            android:textColor="@color/com_color_title"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/com_imgv_main_array"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@mipmap/com_icon_location"
-            app:layout_constraintStart_toEndOf="@+id/com_txtv_main_location"
-            app:layout_constraintTop_toTopOf="@+id/com_txtv_main_location" />
 
         <ImageView
             android:id="@+id/com_imgv_main_add"
@@ -49,8 +29,8 @@
             android:id="@+id/com_mgc_indicator_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
