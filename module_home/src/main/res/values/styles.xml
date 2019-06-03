@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/h_colorAccent</item>
     </style>
 
+    <style name="h_AppLayoutTheme" parent="h_AppTheme">
+        <item name="colorControlHighlight">#EBEBEB</item>
+    </style>
+
 </resources>

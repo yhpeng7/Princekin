@@ -37,8 +37,8 @@ public class LifeFragment extends Fragment {
     @Override
     public View onCreateView (@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.com_fragment_life, container, false);
-        com_magic_indicator_life = view.findViewById(R.id.com_life_magic_indicator);
-        com_vpager_life = view.findViewById(R.id.com_life_view_pager);
+        com_magic_indicator_life = view.findViewById(R.id.com_mgc_indicator_life);
+        com_vpager_life = view.findViewById(R.id.com_vpager_life);
         mFragmentList = new ArrayList<>();
         LivingFragment livingFragment = new LivingFragment();
         RunFragment runFragment = new RunFragment();

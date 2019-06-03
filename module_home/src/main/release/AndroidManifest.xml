@@ -3,7 +3,8 @@
     package="com.yhklsdf.module_home">
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.SaBActivity"></activity>
+        <activity android:name=".ui.activity.CareerActivity"></activity>
+        <activity android:name=".ui.activity.SaBActivity" />
         <activity android:name=".ui.activity.HighDynamicActivity" />
         <activity android:name=".ui.activity.CompanyIntro" />
         <activity android:name=".ui.activity.JobDetailsActivity" />

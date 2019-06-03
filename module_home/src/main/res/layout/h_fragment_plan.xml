@@ -30,8 +30,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/banner_home">
 
-                    <com.yhklsdf.module_home.widget.GradientColorTextView
-                        android:id="@+id/h_home_plan_iv_0"
+                    <com.yhklsdf.lib_common.widget.GradientColorTextView
+                        android:id="@+id/h_home_plan_tv_0"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -57,7 +57,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/h_imageview3"
+                    android:id="@+id/h_home_plan_iv_3"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_marginStart="146dp"
@@ -76,18 +76,18 @@
                     android:textColor="@color/black"
                     android:textSize="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/h_imageview3"
-                    app:layout_constraintStart_toStartOf="@+id/h_imageview3"
-                    app:layout_constraintTop_toBottomOf="@+id/h_imageview3" />
+                    app:layout_constraintEnd_toEndOf="@+id/h_home_plan_iv_3"
+                    app:layout_constraintStart_toStartOf="@+id/h_home_plan_iv_3"
+                    app:layout_constraintTop_toBottomOf="@+id/h_home_plan_iv_3" />
 
                 <ImageButton
-                    android:id="@+id/h_imageview4"
+                    android:id="@+id/h_home_plan_iv_2"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="20dp"
                     android:background="@mipmap/home_logo_2"
-                    app:layout_constraintEnd_toStartOf="@+id/h_imageview3"
+                    app:layout_constraintEnd_toStartOf="@+id/h_home_plan_iv_3"
                     app:layout_constraintTop_toBottomOf="@+id/h_linearlayout" />
 
                 <com.yhklsdf.lib_common.ui.MyTextView
@@ -98,19 +98,19 @@
                     android:text="企业招聘"
                     android:textColor="@color/black"
                     android:textSize="10sp"
-                    app:layout_constraintEnd_toEndOf="@+id/h_imageview4"
+                    app:layout_constraintEnd_toEndOf="@+id/h_home_plan_iv_2"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/h_imageview4"
-                    app:layout_constraintTop_toBottomOf="@+id/h_imageview4" />
+                    app:layout_constraintStart_toStartOf="@+id/h_home_plan_iv_2"
+                    app:layout_constraintTop_toBottomOf="@+id/h_home_plan_iv_2" />
 
                 <ImageButton
-                    android:id="@+id/h_imageview5"
+                    android:id="@+id/h_home_plan_iv_4"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="12dp"
                     android:background="@mipmap/home_logo_4"
-                    app:layout_constraintStart_toEndOf="@+id/h_imageview3"
+                    app:layout_constraintStart_toEndOf="@+id/h_home_plan_iv_3"
                     app:layout_constraintTop_toBottomOf="@+id/h_linearlayout" />
 
                 <com.yhklsdf.lib_common.ui.MyTextView
@@ -121,19 +121,19 @@
                     android:text="我要考研"
                     android:textColor="@color/black"
                     android:textSize="10sp"
-                    app:layout_constraintEnd_toEndOf="@+id/h_imageview5"
+                    app:layout_constraintEnd_toEndOf="@+id/h_home_plan_iv_4"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/h_imageview5"
-                    app:layout_constraintTop_toBottomOf="@+id/h_imageview5" />
+                    app:layout_constraintStart_toStartOf="@+id/h_home_plan_iv_4"
+                    app:layout_constraintTop_toBottomOf="@+id/h_home_plan_iv_4" />
 
                 <ImageButton
-                    android:id="@+id/h_imageview6"
+                    android:id="@+id/h_home_plan_iv_1"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_marginTop="12dp"
                     android:layout_marginEnd="24dp"
                     android:background="@mipmap/home_logo_1"
-                    app:layout_constraintEnd_toStartOf="@+id/h_imageview4"
+                    app:layout_constraintEnd_toStartOf="@+id/h_home_plan_iv_2"
                     app:layout_constraintTop_toBottomOf="@+id/h_linearlayout" />
 
                 <com.yhklsdf.lib_common.ui.MyTextView
@@ -144,19 +144,19 @@
                     android:text="职业规划"
                     android:textColor="@color/black"
                     android:textSize="10sp"
-                    app:layout_constraintEnd_toEndOf="@+id/h_imageview6"
+                    app:layout_constraintEnd_toEndOf="@+id/h_home_plan_iv_1"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/h_imageview6"
-                    app:layout_constraintTop_toBottomOf="@+id/h_imageview6" />
+                    app:layout_constraintStart_toStartOf="@+id/h_home_plan_iv_1"
+                    app:layout_constraintTop_toBottomOf="@+id/h_home_plan_iv_1" />
 
                 <ImageButton
-                    android:id="@+id/h_imageview7"
+                    android:id="@+id/h_home_plan_iv_5"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="12dp"
                     android:background="@mipmap/home_logo_5"
-                    app:layout_constraintStart_toEndOf="@+id/h_imageview5"
+                    app:layout_constraintStart_toEndOf="@+id/h_home_plan_iv_4"
                     app:layout_constraintTop_toBottomOf="@+id/h_linearlayout" />
 
                 <com.yhklsdf.lib_common.ui.MyTextView
@@ -167,10 +167,10 @@
                     android:text="创新创业"
                     android:textColor="@color/black"
                     android:textSize="10sp"
-                    app:layout_constraintEnd_toEndOf="@+id/h_imageview7"
+                    app:layout_constraintEnd_toEndOf="@+id/h_home_plan_iv_5"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/h_imageview7"
-                    app:layout_constraintTop_toBottomOf="@+id/h_imageview7" />
+                    app:layout_constraintStart_toStartOf="@+id/h_home_plan_iv_5"
+                    app:layout_constraintTop_toBottomOf="@+id/h_home_plan_iv_5" />
 
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>

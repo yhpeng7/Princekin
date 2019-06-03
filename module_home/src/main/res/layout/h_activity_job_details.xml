@@ -18,7 +18,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginStart="7dp"
             android:layout_marginTop="16dp"
-            android:background="@mipmap/job_details_1"
+            android:background="@mipmap/back_black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
@@ -69,7 +69,8 @@
                     android:layout_marginStart="13dp"
                     android:layout_marginTop="3dp"
                     android:layout_marginEnd="13dp"
-                    android:elevation="3dp"
+                    android:elevation="1dp"
+                    app:cardCornerRadius="6dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -86,7 +87,7 @@
                             android:layout_marginStart="10dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="13dp"
-                            android:background="@drawable/test_job_1"
+                            android:background="@drawable/ssdk_oks_classic_youdao"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/h_job_details_container_1" />
@@ -196,7 +197,8 @@
                     android:layout_marginStart="13dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="13dp"
-                    android:elevation="3dp"
+                    android:elevation="1dp"
+                    app:cardCornerRadius="6dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/h_cardview">
@@ -235,7 +237,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="13dp"
                     android:layout_marginBottom="13dp"
-                    android:elevation="3dp"
+                    android:elevation="1dp"
+                    app:cardCornerRadius="6dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

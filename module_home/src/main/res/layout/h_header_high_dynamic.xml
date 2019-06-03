@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -14,6 +15,9 @@
         android:id="@+id/h_high_dynamic_iv_header"
         android:layout_width="match_parent"
         android:layout_height="144dp"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        app:bl_ripple_enable="true"
+        app:bl_ripple_color="#EBEBEB"
+        tools:ignore="MissingPrefix" />
 
 </android.support.v7.widget.CardView>

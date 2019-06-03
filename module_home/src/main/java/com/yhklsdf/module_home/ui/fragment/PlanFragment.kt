@@ -10,18 +10,16 @@ import com.yhklsdf.lib_common.base.BaseFragment
 import com.yhklsdf.lib_common.utils.ImageLoader
 import com.yhklsdf.module_home.R
 import com.yhklsdf.module_home.adapter.RVCompetitionAdapter
-import com.yhklsdf.module_home.adapter.VPHomeAdapter
 import com.yhklsdf.module_home.bean.CompetitionBean
 import com.yhklsdf.module_home.bean.NewsBean
 import com.yhklsdf.module_home.bean.TextBannerBean
 import com.yhklsdf.module_home.ui.activity.HighDynamicActivity
 import com.yhklsdf.module_home.ui.activity.JobDetailsActivity
+import com.yhklsdf.module_home.ui.activity.SaBActivity
 import com.yhklsdf.module_home.utils.GlideImageLoader
 import com.youth.banner.BannerConfig
 import kotlinx.android.synthetic.main.h_activity_job_details.*
-import kotlinx.android.synthetic.main.h_fragment_home.*
 import kotlinx.android.synthetic.main.h_fragment_plan.*
-import kotlinx.android.synthetic.main.h_item_home_news.*
 import org.jetbrains.anko.support.v4.startActivity
 
 class PlanFragment : BaseFragment() {
@@ -67,13 +65,12 @@ class PlanFragment : BaseFragment() {
 
     @SuppressLint("InflateParams")
     override fun initView(view: View) {
+        setOnClickListener()
         banner_home.setImages(images)
                 .setIndicatorGravity(BannerConfig.RIGHT)
                 .setImageLoader(GlideImageLoader())
                 .isAutoPlay(true)
                 .start()
-
-        h_home_plan_iv_0.setOnClickListener { startActivity(Intent(activity,HighDynamicActivity::class.java)) }
 
         textBanners.forEach { t ->
             val itemView = layoutInflater.inflate(R.layout.h_item_view_flipper, null)
@@ -85,11 +82,6 @@ class PlanFragment : BaseFragment() {
         }
         h_view_flipper.setFlipInterval(2000)
         h_view_flipper.startFlipping()
-        h_view_flipper.setOnClickListener {
-            Intent(activity,JobDetailsActivity::class.java).run {
-                startActivity(this)
-            }
-        }
 
         val manager = LinearLayoutManager(activity)
         manager.orientation = LinearLayoutManager.HORIZONTAL
@@ -118,6 +110,14 @@ class PlanFragment : BaseFragment() {
             ImageLoader.load(activity!!,t.image,image)
             h_news_container.addView(itemView)
         }
+    }
+
+    private fun setOnClickListener() {
+        h_home_plan_tv_0.setOnClickListener { startActivity(Intent(activity, HighDynamicActivity::class.java)) }
+
+        h_view_flipper.setOnClickListener { startActivity(Intent(activity, JobDetailsActivity::class.java)) }
+
+        h_home_plan_iv_5.setOnClickListener { startActivity(Intent(activity, SaBActivity::class.java)) }
     }
 
     private fun initData() {

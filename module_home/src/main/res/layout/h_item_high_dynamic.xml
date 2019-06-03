@@ -63,10 +63,10 @@
             android:id="@+id/h_tv_high_dynamic_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:layout_marginEnd="30dp"
             android:textColor="#2D6FAA"
             android:textSize="27sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/h_iv_high_dynamic" />
 
@@ -74,6 +74,7 @@
             android:id="@+id/h_textview16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:text="年薪："
             android:textColor="#2D6FAA"
             app:layout_constraintBottom_toBottomOf="@+id/h_tv_high_dynamic_4"

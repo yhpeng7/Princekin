@@ -36,8 +36,8 @@ public class CommunityFragment extends Fragment {
     @Override
     public View onCreateView (@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.com_fragment_community,container,false);
-        com_viewpager = view.findViewById(R.id.com_viewpager);
-        com_magic_indicator = view.findViewById(R.id.com_tablayout);
+        com_viewpager = view.findViewById(R.id.com_vpager_main);
+        com_magic_indicator = view.findViewById(R.id.com_mgc_indicator_main);
         TechFragment techFragment = new TechFragment();
         LifeFragment lifeFragment = new LifeFragment();
         mFragmentList = new ArrayList<>();

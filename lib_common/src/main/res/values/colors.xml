@@ -5,7 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="textColorPrimary">#262626</color>
     <color name="viewBackground">#FFFFFF</color>
-
-    <!--item-->
+    <color name="lib_color_search_tip">#9c9ea1</color>
     <color name="item_nav_color_tv">@color/textColorPrimary</color>
 </resources>

@@ -1,6 +1,7 @@
 package com.yhklsdf.module_community;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.bumptech.glide.Glide;
+import com.yhklsdf.lib_common.module.SearchActivity;
 
 import java.util.ArrayList;
 
@@ -34,6 +37,13 @@ public class TechAdapter extends RecyclerView.Adapter<TechAdapter.DataViewHolder
     @Override
     public void onBindViewHolder (@NonNull DataViewHolder viewHolder, int i) {
         DataBean databean = mDataBeanList.get(i);
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext,SearchActivity.class);
+                mContext.startActivity(intent);
+            }
+        });
         switch (databean.avatar) {
             case "1":
                 Glide.with(mContext).load(R.drawable.com_ic_avatar_1).into(viewHolder.com_cimgv_avatar);

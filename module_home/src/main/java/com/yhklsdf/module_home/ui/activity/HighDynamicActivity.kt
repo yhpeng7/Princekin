@@ -13,10 +13,15 @@ import kotlinx.android.synthetic.main.activity_high_dynamic.*
 class HighDynamicActivity : BaseSwipeBackActivity() {
 
     val data = mutableListOf(
-            HighDynamicBean("Java开发","@drawable/ssdk_oks_classic_youdao","深圳腾讯有限公司","上市公司|互联网|2000+人","80万"),
-            HighDynamicBean("Java开发","@drawable/ssdk_oks_classic_youdao","深圳腾讯有限公司","上市公司|互联网|2000+人","80万"),
-            HighDynamicBean("Java开发","@drawable/ssdk_oks_classic_youdao","深圳腾讯有限公司","上市公司|互联网|2000+人","80万"),
-            HighDynamicBean("Java开发","@drawable/ssdk_oks_classic_youdao","深圳腾讯有限公司","上市公司|互联网|2000+人","80万")
+            HighDynamicBean("Java开发",R.drawable.ssdk_oks_classic_youdao,"深圳腾讯有限公司","上市公司|互联网|2000+人","80万"),
+            HighDynamicBean("Java开发",R.drawable.ssdk_oks_classic_youdao,"深圳腾讯有限公司","上市公司|互联网|2000+人","80万"),
+            HighDynamicBean("Java开发",R.drawable.ssdk_oks_classic_youdao,"深圳腾讯有限公司","上市公司|互联网|2000+人","80万"),
+            HighDynamicBean("Java开发",R.drawable.ssdk_oks_classic_youdao,"深圳腾讯有限公司","上市公司|互联网|2000+人","80万"),
+            HighDynamicBean("Java开发",R.drawable.ssdk_oks_classic_youdao,"深圳腾讯有限公司","上市公司|互联网|2000+人","80万"),
+            HighDynamicBean("Java开发",R.drawable.ssdk_oks_classic_youdao,"深圳腾讯有限公司","上市公司|互联网|2000+人","80万"),
+            HighDynamicBean("Java开发",R.drawable.ssdk_oks_classic_youdao,"深圳腾讯有限公司","上市公司|互联网|2000+人","80万"),
+            HighDynamicBean("Java开发",R.drawable.ssdk_oks_classic_youdao,"深圳腾讯有限公司","上市公司|互联网|2000+人","80万"),
+            HighDynamicBean("Java开发",R.drawable.ssdk_oks_classic_youdao,"深圳腾讯有限公司","上市公司|互联网|2000+人","80万")
     )
 
     override fun attachLayoutRes() = R.layout.activity_high_dynamic
