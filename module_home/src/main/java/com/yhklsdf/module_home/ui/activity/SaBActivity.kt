@@ -47,6 +47,8 @@ class SaBActivity : BaseSwipeBackActivity() {
                 .start()
         adapter.addHeaderView(headerView)
         h_sab_rv.adapter = adapter
+
+        h_sab_back.setOnClickListener { finish() }
     }
 
     override fun start() {

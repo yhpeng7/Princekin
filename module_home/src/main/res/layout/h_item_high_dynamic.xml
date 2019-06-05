@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/h_cardview3"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginStart="11dp"
     android:layout_marginEnd="11dp"
     android:layout_marginBottom="6dp"
-    app:cardCornerRadius="6dp"
-    android:elevation="1dp">
+    android:elevation="1dp"
+    app:cardCornerRadius="6dp">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -31,53 +32,59 @@
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="34dp"
-            android:layout_marginBottom="14dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/h_tv_high_dynamic_3"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/h_tv_high_dynamic_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="10dp"
+            android:text="dfsdafsdf"
             android:textColor="@color/black"
             android:textSize="9sp"
             app:layout_constraintStart_toEndOf="@+id/h_iv_high_dynamic"
-            app:layout_constraintTop_toTopOf="@+id/h_iv_high_dynamic" />
+            app:layout_constraintTop_toTopOf="@+id/h_tv_high_dynamic_4" />
 
         <TextView
             android:id="@+id/h_tv_high_dynamic_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
-            android:layout_marginBottom="1dp"
+            android:layout_marginTop="10dp"
+            android:text="dfadsfasd"
             android:textColor="#8D8D8D"
             android:textSize="9sp"
-            app:layout_constraintBottom_toBottomOf="@+id/h_iv_high_dynamic"
-            app:layout_constraintStart_toEndOf="@+id/h_iv_high_dynamic" />
+            app:layout_constraintStart_toEndOf="@+id/h_iv_high_dynamic"
+            app:layout_constraintTop_toBottomOf="@+id/h_tv_high_dynamic_2" />
 
         <TextView
             android:id="@+id/h_tv_high_dynamic_4"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="30dp"
+            android:layout_marginBottom="26dp"
+            android:text="dfadsf"
             android:textColor="#2D6FAA"
             android:textSize="27sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/h_iv_high_dynamic" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/h_textview16"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginBottom="5dp"
+            android:gravity="end"
             android:text="年薪："
             android:textColor="#2D6FAA"
             app:layout_constraintBottom_toBottomOf="@+id/h_tv_high_dynamic_4"
-            app:layout_constraintEnd_toStartOf="@+id/h_tv_high_dynamic_4" />
+            app:layout_constraintEnd_toStartOf="@+id/h_tv_high_dynamic_4"
+            app:layout_constraintStart_toEndOf="@+id/h_tv_high_dynamic_3" />
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

@@ -1,7 +1,5 @@
 package com.yhklsdf.module_home.ui.activity
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
 import com.yhklsdf.lib_common.base.BaseSwipeBackActivity
 import com.yhklsdf.module_home.R
 import kotlinx.android.synthetic.main.activity_company_intro.*

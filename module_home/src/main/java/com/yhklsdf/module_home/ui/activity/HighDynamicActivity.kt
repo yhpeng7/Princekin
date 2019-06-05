@@ -1,9 +1,6 @@
 package com.yhklsdf.module_home.ui.activity
 
-import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.widget.ImageView
 import com.yhklsdf.lib_common.base.BaseSwipeBackActivity
 import com.yhklsdf.module_home.R
 import com.yhklsdf.module_home.adapter.RVHighDynamicAdapter
@@ -35,6 +32,8 @@ class HighDynamicActivity : BaseSwipeBackActivity() {
         val adapter = RVHighDynamicAdapter(this,data)
         adapter.setHeaderView(layoutInflater.inflate(R.layout.h_header_high_dynamic,h_high_dynamic_rv,false))
         h_high_dynamic_rv.adapter = adapter
+
+        h_high_dynamic_iv_1.setOnClickListener { finish() }
     }
 
     override fun start() {
