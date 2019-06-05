@@ -4,4 +4,5 @@
     <dimen name="com_indicator_main_height">6dp</dimen>
     <dimen name="com_indicator_life_width">24dp</dimen>
     <dimen name="com_indicator_life_height">2dp</dimen>
+    <dimen name="lib_search_button_margin">12dp</dimen>
 </resources>

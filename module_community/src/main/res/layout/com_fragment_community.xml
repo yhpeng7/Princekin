@@ -10,33 +10,13 @@
         android:id="@+id/com_constraintlayout"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/com_color_toolbar_gradient"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/com_txtv_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="13dp"
-            android:text="西邮"
-            android:textColor="@color/com_color_title"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <ImageView
-            android:id="@+id/com_imageview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@mipmap/com_icon_location"
-            app:layout_constraintStart_toEndOf="@+id/com_txtv_location"
-            app:layout_constraintTop_toTopOf="@+id/com_txtv_location" />
-
-        <ImageView
-            android:id="@+id/com_imgv_add"
+            android:id="@+id/com_imgv_main_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="7dp"
@@ -46,11 +26,11 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <net.lucode.hackware.magicindicator.MagicIndicator
-            android:id="@+id/com_tablayout"
+            android:id="@+id/com_mgc_indicator_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -69,7 +49,7 @@
     </android.support.constraint.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/com_imageview3"
+        android:id="@+id/com_imgv_divider_main"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#E9E9E9"
@@ -78,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/com_constraintlayout" />
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/com_viewpager"
+        android:id="@+id/com_vpager_main"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
