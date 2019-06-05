@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="151dp"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/course_card"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_course"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/java_course" />
+
+                <com.yhklsdf.lib_common.ui.MyTextView
+                    android:id="@+id/tv_course_type"
+                    android:layout_width="25dp"
+                    android:layout_height="13dp"
+                    android:background="@drawable/bg_course_type"
+                    android:text="已购"
+                    android:gravity="center"
+                    android:textColor="#F5F5F5"
+                    android:textSize="9sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <com.yhklsdf.module_course.view.MyProgressBar
+            android:id="@+id/pb_course_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="17dp"
+            android:layout_marginBottom="6dp"
+            android:progress="24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.yhklsdf.lib_common.ui.MyTextView
+            android:id="@+id/tv_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="JAVA"
+            android:textColor="#010101"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/pb_course_progress"
+            app:layout_constraintTop_toBottomOf="@id/course_card" />
+
+        <com.yhklsdf.lib_common.ui.MyTextView
+            android:id="@+id/tv_course_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="9%"
+            android:textColor="#F5F5F5"
+            android:textSize="9sp"
+            app:layout_constraintLeft_toLeftOf="@id/pb_course_progress"
+            app:layout_constraintTop_toBottomOf="@id/pb_course_progress"
+            app:layout_constraintTop_toTopOf="@id/pb_course_progress" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
