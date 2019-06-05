@@ -29,11 +29,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         findViewById(R.id.back).setOnClickListener(this);
     }
 
-    /**
-     * Called when a view has been clicked.
-     *
-     * @param v The view that was clicked.
-     */
     @Override
     public void onClick(View v) {
         int id = v.getId();

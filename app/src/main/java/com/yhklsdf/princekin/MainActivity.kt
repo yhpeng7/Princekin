@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import com.alibaba.android.arouter.launcher.ARouter
 import com.yhklsdf.lib_common.base.BaseActivity
 import com.yhklsdf.module_community.Fragment.CommunityFragment
-import com.yhklsdf.module_course.CourseFragment
+import com.yhklsdf.module_course.fragment.CourseFragment
 import com.yhklsdf.module_home.ui.fragment.HomeFragment
 import com.yhklsdf.module_mine.MineFragment
 import kotlinx.android.synthetic.main.activity_main.*

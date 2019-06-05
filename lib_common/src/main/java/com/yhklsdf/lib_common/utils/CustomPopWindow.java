@@ -171,7 +171,7 @@ public class CustomPopWindow implements PopupWindow.OnDismissListener {
         // 添加dissmiss 监听
         mPopupWindow.setOnDismissListener(this);
 
-        //2017.6.27 add:fix 设置  setOutsideTouchable（false）点击外部取消的bug.
+        //2017.6.27 add:fix ic_setting  setOutsideTouchable（false）点击外部取消的bug.
         // 判断是否点击PopupWindow之外的地方关闭 popWindow
         if (!enableOutsideTouchDisMiss) {
             //注意这三个属性必须同时设置，不然不能disMiss，以下三行代码在Android 4.4 上是可以，然后在Android 6.0以上，下面的三行代码就不起作用了，就得用下面的方法
