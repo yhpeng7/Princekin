@@ -32,7 +32,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
-@Route(path = "/lib/search")
+@Route(path = "/common/search")
 public class SearchActivity extends AppCompatActivity {
     private ImageView lib_imgv_search_back;
     private TextView lib_txtv_search_cancel;
@@ -109,9 +109,9 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        lib_srchv_search = findViewById(R.id.lib_srchv_search);
-        lib_imgv_search_back = findViewById(R.id.lib_imgv_search_back);
-        lib_txtv_search_cancel = findViewById(R.id.lib_txtv_search_cancel);
+        lib_srchv_search = findViewById(R.id.home_linear_post_graduate);
+        lib_imgv_search_back = findViewById(R.id.home_imgbtn_recruit_back);
+        lib_txtv_search_cancel = findViewById(R.id.home_txtv_post_graduate_cancel);
         lib_constraint_search_containner = findViewById(R.id.lib_constraint_search_containner); //放置Fragment的位置
         lib_constraint_search_curtain = findViewById(R.id.lib_constraint_search_curtain);   //一个覆盖全局的加载圈
         mHistoryPreferences = getSharedPreferences("History", MODE_PRIVATE);

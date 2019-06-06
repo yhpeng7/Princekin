@@ -7,4 +7,5 @@
     <color name="viewBackground">#FFFFFF</color>
     <color name="lib_color_search_tip">#9c9ea1</color>
     <color name="item_nav_color_tv">@color/textColorPrimary</color>
+    <color name="home_color_dialog_checkin_text">#000000</color>
 </resources>

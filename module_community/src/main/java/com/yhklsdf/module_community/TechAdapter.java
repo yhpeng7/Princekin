@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.alibaba.android.arouter.launcher.ARouter;
 import com.bumptech.glide.Glide;
-import com.yhklsdf.lib_common.module.SearchActivity;
+import com.yhklsdf.lib_common.module.home.activity.PostGraduateActivity;
+import com.yhklsdf.lib_common.module.home.activity.RecruitActivity;
 
 import java.util.ArrayList;
 
@@ -40,7 +40,13 @@ public class TechAdapter extends RecyclerView.Adapter<TechAdapter.DataViewHolder
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext,SearchActivity.class);
+//                Intent intent = new Intent(mContext,SearchActivity.class);    //显示SearchView
+//                mContext.startActivity(intent);
+//                CheckInDialog checkInDialog = new CheckInDialog(mContext);  //显示签到Dialog
+//                checkInDialog.show();
+//                Intent intent = new Intent(mContext, PostGraduateActivity.class); //显示我要考研
+//                mContext.startActivity(intent);
+                Intent intent = new Intent(mContext, RecruitActivity.class);  //显示招聘
                 mContext.startActivity(intent);
             }
         });

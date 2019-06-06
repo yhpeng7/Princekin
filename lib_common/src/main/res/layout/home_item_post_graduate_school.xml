@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="11dp"
+        android:elevation="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/home_imgv_item_post_graduate_school"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/home_imgv_item_post_graduate_school_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:lines="1"
+                android:text="TextView"
+                app:layout_constraintStart_toEndOf="@+id/home_imgv_item_post_graduate_school"
+                app:layout_constraintTop_toTopOf="@+id/home_imgv_item_post_graduate_school" />
+
+            <TextView
+                android:id="@+id/home_imgv_item_post_graduate_school_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="28dp"
+                android:lines="3"
+                android:text="TextView"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/home_imgv_item_post_graduate_school_array"
+                app:layout_constraintStart_toEndOf="@+id/home_imgv_item_post_graduate_school"
+                app:layout_constraintTop_toBottomOf="@+id/home_imgv_item_post_graduate_school_name" />
+
+            <TextView
+                android:id="@+id/home_imgv_item_post_graduate_school_tag"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="8dp"
+                android:lines="1"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="@+id/home_imgv_item_post_graduate_school_name"
+                app:layout_constraintEnd_toStartOf="@+id/home_imgv_item_post_graduate_school_array"
+                app:layout_constraintStart_toEndOf="@+id/home_imgv_item_post_graduate_school_name"
+                app:layout_constraintTop_toTopOf="@+id/home_imgv_item_post_graduate_school_name" />
+
+            <ImageView
+                android:id="@+id/home_imgv_item_post_graduate_school_array"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@mipmap/home_ic_array_left_black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
