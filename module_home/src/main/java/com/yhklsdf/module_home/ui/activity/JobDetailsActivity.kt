@@ -109,7 +109,6 @@ class JobDetailsActivity : BaseSwipeBackActivity() {
                 h_btn_job_details_4.textColor = Color.parseColor("#2D6FAA")
                 h_btn_job_details_3.visibility = View.GONE
                 h_btn_job_details_3.setImageResource(R.mipmap.job_details_5)
-                AnimatorUtil.scaleShow(h_btn_job_details_3)
                 isCollect = true
             } else {
                 h_btn_job_details_4.text = "收藏"

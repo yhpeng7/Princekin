@@ -28,17 +28,17 @@
 
 
             <ImageView
-                android:id="@+id/lib_imgv_search_back"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:id="@+id/home_imgbtn_recruit_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="13dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@color/black" />
+                app:srcCompat="@mipmap/lib_ic_back_white" />
 
             <TextView
-                android:id="@+id/lib_txtv_search_cancel"
+                android:id="@+id/home_txtv_post_graduate_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="13dp"
@@ -50,7 +50,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.v7.widget.SearchView
-                android:id="@+id/lib_srchv_search"
+                android:id="@+id/home_linear_post_graduate"
                 app:searchIcon="@mipmap/lib_ic_scope"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -63,8 +63,8 @@
                 app:closeIcon="@android:color/transparent"
                 app:iconifiedByDefault="false"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/lib_txtv_search_cancel"
-                app:layout_constraintStart_toEndOf="@+id/lib_imgv_search_back"
+                app:layout_constraintEnd_toStartOf="@+id/home_txtv_post_graduate_cancel"
+                app:layout_constraintStart_toEndOf="@+id/home_imgbtn_recruit_back"
                 app:layout_constraintTop_toTopOf="parent" />
         </android.support.constraint.ConstraintLayout>
     </android.support.constraint.ConstraintLayout>
