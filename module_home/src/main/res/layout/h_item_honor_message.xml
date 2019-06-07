@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/h_iv_job_details_avatar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/home_logo_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.yhklsdf.lib_common.ui.MyTextView
+        android:id="@+id/h_tv_job_details_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="赵先锋"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/h_iv_job_details_avatar"
+        app:layout_constraintStart_toEndOf="@+id/h_iv_job_details_avatar"
+        app:layout_constraintTop_toTopOf="@+id/h_iv_job_details_avatar" />
+
+    <com.yhklsdf.lib_common.ui.MyTextView
+        android:id="@+id/h_tv_job_details_institute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="通院"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/h_tv_job_details_name"
+        app:layout_constraintStart_toEndOf="@+id/h_tv_job_details_name"
+        app:layout_constraintTop_toTopOf="@+id/h_tv_job_details_name" />
+
+    <com.yhklsdf.lib_common.ui.MyTextView
+        android:id="@+id/h_tv_job_details_achievement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="考验清华"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/h_tv_job_details_institute"
+        app:layout_constraintStart_toEndOf="@+id/h_tv_job_details_institute"
+        app:layout_constraintTop_toTopOf="@+id/h_tv_job_details_institute" />
+
+    <com.yhklsdf.lib_common.ui.MyTextView
+        android:id="@+id/h_tv_job_details_fraction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="550被录取"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/h_tv_job_details_institute"
+        app:layout_constraintStart_toEndOf="@+id/h_tv_job_details_achievement"
+        app:layout_constraintTop_toTopOf="@+id/h_tv_job_details_institute" />
+
+    <com.yhklsdf.lib_common.ui.MyTextView
+        android:id="@+id/h_tv_job_details_summary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="16dp"
+        android:maxLines="3"
+        android:text="赵先锋"
+        android:textColor="#707070"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/h_tv_job_details_name"
+        app:layout_constraintTop_toBottomOf="@+id/h_iv_job_details_avatar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:background="#EDEDED"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</android.support.constraint.ConstraintLayout>
